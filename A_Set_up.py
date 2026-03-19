@@ -168,8 +168,7 @@ def setup_game():
 # import os
 #
 # # Your API key (keep private)
-# openai.api_key = "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"
-#
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")#
 #
 # # ---------------------------
 # # 1. Generate 50 cities and save once
@@ -243,13 +242,12 @@ def setup_game():
 # import openai
 #
 # # Your API key (keep private)
-# openai.api_key = "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"
-#
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")#
 # with open("City_Info_API.json", "r") as f:
 #     City_Info_API = json.load(f)
 #
 #
-# def setup_game():
+# def setup_game():git reset --soft HEAD~1
 #     # --- Generate 50 world cities with OpenAI ---
 #     prompt = """List 50 of the most important, globally recognized cities
 # (at least 3 from each continent: Asia, Europe, Africa, North America,
