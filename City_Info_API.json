@@ -1,0 +1,2169 @@
+{
+  "Sudan": {
+    "city": "Sudan",
+    "country": "Sudan",
+    "country_code": "SD",
+    "population": "48,945,000",
+    "latitude": 15.0,
+    "longitude": 32.0,
+    "region": null,
+    "id": 3917610,
+    "wikiDataId": "Q1049",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Sudan"
+    ],
+    "area": [
+      "1840687"
+    ],
+    "highestPoint": [
+      "http://www.wikidata.org/entity/Q2520348"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Western%20Deffufa%20-%20Kerma.jpg"
+    ],
+    "osmId": "192789",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:Sudan.map"
+    ],
+    "coordinateLocation": {
+      "lat": 15,
+      "lon": 32
+    },
+    "continentLabel": "Africa",
+    "officialLanguageLabel": [
+      "English"
+    ],
+    "filmLabel": [
+      "country"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Sudan.svg"
+    ],
+    "sharesBorderWithLabel": [
+      "Egypt"
+    ],
+    "timeZoneLabel": "UTC+02:00",
+    "physicalFeatureLabel": [
+      "Sahel"
+    ],
+    "area_km2": 1,
+    "highestPoint_m": null
+  },
+  "Chongqing": {
+    "city": "Chongqing",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "32,054,159",
+    "latitude": 29.55,
+    "longitude": 106.506944444,
+    "region": "Chongqing",
+    "id": 3710839,
+    "wikiDataId": "Q11725",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Chongqing"
+    ],
+    "area": [
+      "82403"
+    ],
+    "highestPoint": [
+      "http://www.wikidata.org/entity/Q109712806"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Chongqing%2C%20China%20ESA23338300.jpeg"
+    ],
+    "osmId": "913069",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:China/Chongqing.map"
+    ],
+    "coordinateLocation": {
+      "lat": 29.55,
+      "lon": 106.506944444
+    },
+    "continentLabel": "Asia",
+    "filmLabel": [
+      "megacity"
+    ],
+    "sharesBorderWithLabel": [
+      "Sichuan"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Yangtze"
+    ],
+    "physicalFeatureLabel": [
+      "Southwestern China"
+    ],
+    "area_km2": 0.082403,
+    "highestPoint_m": null,
+    "officialSymbolLabel": []
+  },
+  "Delhi": {
+    "city": "Delhi",
+    "country": "India",
+    "country_code": "IN",
+    "population": "26,495,000",
+    "latitude": 28.666666666,
+    "longitude": 77.216666666,
+    "region": "National Capital Territory of Delhi",
+    "id": 3519923,
+    "wikiDataId": "Q1353",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Delhi, officially the National Capital Territory (NCT) of Delhi, is a city and a union territory of India containing New Delhi, the capital of India. Straddling the Yamuna river, but spread chiefly to the west, or beyond its right bank, Delhi shares borders with the state of Uttar Pradesh in the east and with the state of Haryana in the remaining directions. Delhi became a union territory on 1 November 1956 and the NCT in 1995.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/COL-city_icon.png",
+    "cityLabel": [
+      "Delhi"
+    ],
+    "area": [
+      "1397.3"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%20in%20Delhi%2003-2016%20img3.jpg"
+    ],
+    "osmId": "1942586",
+    "coordinateLocation": {
+      "lat": 28.666666666,
+      "lon": 77.216666666
+    },
+    "continentLabel": "Asia",
+    "significantEventLabel": [
+      "Siege of Delhi"
+    ],
+    "filmLabel": [
+      "administrative territorial entity"
+    ],
+    "timeZoneLabel": "UTC+05:30",
+    "area_km2": 0.0013973,
+    "officialSymbolLabel": []
+  },
+  "Shanghai": {
+    "city": "Shanghai",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "24,870,895",
+    "latitude": 31.232222222,
+    "longitude": 121.469166666,
+    "region": "Shanghai",
+    "id": 3856768,
+    "wikiDataId": "Q8686",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Shanghai is a direct-administered municipality and the most populous urban area in China. The city is located on the Chinese shoreline on the southern estuary of the Yangtze River, with the Huangpu River flowing through it. The population of the city proper is the second largest in the world with around 24.87 million inhabitants in 2023, while the urban area is the most populous in China, with 29.87 million residents.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Old_City_of_Shanghai%2C_China_%28December_2015%29_-_13.JPG",
+    "cityLabel": [
+      "Shanghai"
+    ],
+    "area": [
+      "6341"
+    ],
+    "highestPoint": [
+      "http://www.wikidata.org/entity/Q28542133"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Shanghai%20121.45796E%2031.22234N.jpg"
+    ],
+    "osmId": "913067",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:China/Shanghai.map"
+    ],
+    "coordinateLocation": {
+      "lat": 31.232222222,
+      "lon": 121.469166666
+    },
+    "continentLabel": "Asia",
+    "significantEventLabel": [
+      "Expo 2010 Shanghai China"
+    ],
+    "filmLabel": [
+      "megacity"
+    ],
+    "sharesBorderWithLabel": [
+      "Jiangsu"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Yangtze"
+    ],
+    "physicalFeatureLabel": [
+      "Yangtze Delta"
+    ],
+    "area_km2": 0.006341,
+    "highestPoint_m": null,
+    "officialSymbolLabel": []
+  },
+  "Beijing": {
+    "city": "Beijing",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "21,893,095",
+    "latitude": 39.90403,
+    "longitude": 116.407526,
+    "region": "Beijing",
+    "id": 3711753,
+    "wikiDataId": "Q956",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Beijing"
+    ],
+    "area": [
+      "16410.54"
+    ],
+    "highestPoint": [
+      "http://www.wikidata.org/entity/Q10870769"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Large%20Beijing%20Landsat.jpg"
+    ],
+    "osmId": "912940",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:China/Beijing.map"
+    ],
+    "coordinateLocation": {
+      "lat": 39.90403,
+      "lon": 116.407526
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Chinese"
+    ],
+    "significantEventLabel": [
+      "2008 Summer Olympics"
+    ],
+    "filmLabel": [
+      "national capital"
+    ],
+    "sharesBorderWithLabel": [
+      "Tianjin"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Yongding River"
+    ],
+    "physicalFeatureLabel": [
+      "North China"
+    ],
+    "area_km2": 0.01641054,
+    "highestPoint_m": null,
+    "officialSymbolLabel": []
+  },
+  "Chengdu": {
+    "city": "Chengdu",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "20,937,757",
+    "latitude": 30.66,
+    "longitude": 104.063333333,
+    "region": "Sichuan",
+    "id": 3706435,
+    "wikiDataId": "Q30002",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Chengdu"
+    ],
+    "area": [
+      "14378"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%AA%E5%B1%B1%E4%B8%8B%E7%9A%84%E6%88%90%E9%83%BD%E5%B8%82%E5%A4%A9%E9%99%85%E7%BA%BF%20Chengdu%20skyline%20with%20snow%20capped%20mountains.jpg"
+    ],
+    "osmId": "2110264",
+    "coordinateLocation": {
+      "lat": 30.66,
+      "lon": 104.063333333
+    },
+    "continentLabel": "Asia",
+    "filmLabel": [
+      "city"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.014378,
+    "officialSymbolLabel": []
+  },
+  "Lahore Division": {
+    "city": "Lahore Division",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "19,581,281",
+    "latitude": 31.16666667,
+    "longitude": 74.5,
+    "region": "Punjab",
+    "id": 3002763,
+    "wikiDataId": "Q3308170",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Lahore Division"
+    ],
+    "area": [
+      "5767"
+    ],
+    "osmId": "16338526",
+    "coordinateLocation": {
+      "lat": 31.16666667,
+      "lon": 74.5
+    },
+    "filmLabel": [
+      "division of Pakistan"
+    ],
+    "area_km2": 0.005767,
+    "officialSymbolLabel": []
+  },
+  "Guangzhou": {
+    "city": "Guangzhou",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "18,676,605",
+    "latitude": 23.13,
+    "longitude": 113.26,
+    "region": "Guangdong",
+    "id": 3710972,
+    "wikiDataId": "Q16572",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Guangzhou"
+    ],
+    "area": [
+      "7248.86"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Canton%20Tower%2020220626%20%28cropped%29.jpg"
+    ],
+    "osmId": "3287346",
+    "coordinateLocation": {
+      "lat": 23.13,
+      "lon": 113.26
+    },
+    "continentLabel": "Asia",
+    "filmLabel": [
+      "megacity"
+    ],
+    "sharesBorderWithLabel": [
+      "Foshan"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Pearl River"
+    ],
+    "area_km2": 0.007248859999999999,
+    "officialSymbolLabel": []
+  },
+  "Shenzhen": {
+    "city": "Shenzhen",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "17,681,600",
+    "latitude": 22.546666666,
+    "longitude": 114.054444444,
+    "region": "Guangdong",
+    "id": 3711605,
+    "wikiDataId": "Q15174",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Shenzhen"
+    ],
+    "area": [
+      "1997.27"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/The%20west%20panorama%20of%20Shenzhen2021.jpg"
+    ],
+    "osmId": "3464353",
+    "coordinateLocation": {
+      "lat": 22.546666666,
+      "lon": 114.054444444
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Chinese"
+    ],
+    "filmLabel": [
+      "city"
+    ],
+    "sharesBorderWithLabel": [
+      "Hong Kong"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.0019972699999999998,
+    "officialSymbolLabel": []
+  },
+  "Dhaka": {
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "country_code": "BD",
+    "population": "16,800,000",
+    "latitude": 23.728888888,
+    "longitude": 90.394444444,
+    "region": "Dhaka Division",
+    "id": 133468,
+    "wikiDataId": "Q1354",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Dhaka ( DAH-kə or  DAK-ə; Bengali: ঢাকা, romanized: Ḍhākā, pronounced [ˈɖʱaka] ), formerly spelled as Dacca, is the capital and largest city of Bangladesh. It is one of the largest and most densely populated cities in the world with a density of about 34,000 citizens per square kilometers within a total area of approximately 300 square kilometers. Dhaka is a megacity, and has a population of 10.2 million as of 2024, and a population of over 23.9 million in Dhaka Metropolitan Area.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/COL-city_icon.png",
+    "cityLabel": [
+      "Dhaka"
+    ],
+    "area": [
+      "368"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Dhaka%20skyline1.jpg"
+    ],
+    "osmId": "3921322",
+    "coordinateLocation": {
+      "lat": 23.728888888,
+      "lon": 90.394444444
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Bangla"
+    ],
+    "filmLabel": [
+      "city"
+    ],
+    "timeZoneLabel": "UTC+06:00",
+    "area_km2": 0.000368,
+    "officialSymbolLabel": []
+  },
+  "Gujranwala Division": {
+    "city": "Gujranwala Division",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "16,123,984",
+    "latitude": 32.45,
+    "longitude": 74.13333,
+    "region": "Punjab",
+    "id": 3023945,
+    "wikiDataId": "Q12858404",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Gujranwala Division"
+    ],
+    "osmId": "16339102",
+    "coordinateLocation": {
+      "lat": 32.45,
+      "lon": 74.13333
+    },
+    "filmLabel": [
+      "division of Pakistan"
+    ],
+    "officialSymbolLabel": []
+  },
+  "Istanbul": {
+    "city": "Istanbul",
+    "country": "Turkey",
+    "country_code": "TR",
+    "population": "15,655,924",
+    "latitude": 41.01,
+    "longitude": 28.960277777,
+    "region": "Istanbul Province",
+    "id": 3858005,
+    "wikiDataId": "Q406",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Istanbul is the largest city in Turkey, constituting the country's economic, cultural, and historical heart. With a population over 15 million, it is home to 18% of the population of Turkey. Istanbul is among the largest cities in Europe and in the world by population.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Historical_peninsula_and_modern_skyline_of_Istanbul.jpg",
+    "cityLabel": [
+      "Istanbul"
+    ],
+    "area": [
+      "5343"
+    ],
+    "highestPoint": [
+      "http://www.wikidata.org/entity/Q4817974"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Istanbul%20Montage%202016.png"
+    ],
+    "coordinateLocation": {
+      "lat": 41.01,
+      "lon": 28.960277777
+    },
+    "continentLabel": "Europe",
+    "significantEventLabel": [
+      "Occupation of Constantinople"
+    ],
+    "filmLabel": [
+      "megacity"
+    ],
+    "timeZoneLabel": "UTC+03:00",
+    "nextToWaterLabel": [
+      "Black Sea"
+    ],
+    "physicalFeatureLabel": [
+      "Marmara Region"
+    ],
+    "area_km2": 0.005343,
+    "highestPoint_m": null,
+    "officialSymbolLabel": []
+  },
+  "Mumbai": {
+    "city": "Mumbai",
+    "country": "India",
+    "country_code": "IN",
+    "population": "15,414,288",
+    "latitude": 19.075833333,
+    "longitude": 72.8775,
+    "region": "Maharashtra",
+    "id": 56521,
+    "wikiDataId": "Q1156",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Mumbai ( muum-BY; Marathi: Mumbaī, pronounced [ˈmumbəi] ), also known as Bombay ( bom-BAY; its official name until 1995), is the capital city of the Indian state of Maharashtra. Mumbai is the financial capital and the most populous city proper of India with an estimated population of 12.5 million (1.25 crore). Mumbai is the centre of the Mumbai Metropolitan Region, which is among the most populous metropolitan areas in the world with a population of over 23 million (2.3 crore).",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Marine_Drive_Skyline.jpg",
+    "cityLabel": [
+      "Mumbai"
+    ],
+    "area": [
+      "603"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Panoramic%20view%20of%20Taj%20Palace%20Hotel%20and%20Taj%20Tower%20with%20the%20iconic%20Gateway%20of%20India%20in%20the%20background%20%28cropped%29.jpg"
+    ],
+    "osmId": "7888990",
+    "coordinateLocation": {
+      "lat": 19.075833333,
+      "lon": 72.8775
+    },
+    "continentLabel": "Asia",
+    "significantEventLabel": [
+      "26/11 Mumbai attacks"
+    ],
+    "filmLabel": [
+      "city"
+    ],
+    "timeZoneLabel": "Indian Standard Time",
+    "area_km2": 0.000603,
+    "officialSymbolLabel": []
+  },
+  "Lagos": {
+    "city": "Lagos",
+    "country": "Nigeria",
+    "country_code": "NG",
+    "population": "15,070,000",
+    "latitude": 6.456111111,
+    "longitude": 3.393611111,
+    "region": "Lagos State",
+    "id": 82318,
+    "wikiDataId": "Q8673",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Lagos ( LAY-goss; Yoruba: Èkó [èkó]), or Lagos City, is a large metropolitan city in southwestern Nigeria. As of November 2025, the size of the city's population has been estimated to stand between 17 and 21 million residents, making Lagos the largest city in Nigeria, the most populous urban area on the African continent, and one of the fastest-growing megacities in the world. Lagos was the national capital of Nigeria until the government's December 1991 decision to relocate its capital to Abuja, in the centre of the country.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Eko_Atlantic_%28Lagos%29_Skyline.jpg",
+    "cityLabel": [
+      "Lagos"
+    ],
+    "area": [
+      "1171.28"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/5th%20Avenue%20Road%2C%20Egbeda%2C%20Lagos.jpg"
+    ],
+    "coordinateLocation": {
+      "lat": 6.456111111,
+      "lon": 3.393611111
+    },
+    "continentLabel": "Africa",
+    "officialLanguageLabel": [
+      "English"
+    ],
+    "filmLabel": [
+      "city"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Lagos%20State%20Flag%20%281967-1970%29.svg"
+    ],
+    "timeZoneLabel": "UTC+01:00",
+    "area_km2": 0.00117128
+  },
+  "Beijing Shi": {
+    "city": "Beijing Shi",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "14,933,274",
+    "latitude": 40.2,
+    "longitude": 116.4167,
+    "region": "Beijing",
+    "id": 3643093,
+    "wikiDataId": "Q12360235",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Beijing Shi"
+    ],
+    "coordinateLocation": {
+      "lat": 40.2,
+      "lon": 116.4167
+    },
+    "filmLabel": [
+      "municipality"
+    ],
+    "officialSymbolLabel": []
+  },
+  "Karachi": {
+    "city": "Karachi",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "14,910,352",
+    "latitude": 24.86,
+    "longitude": 67.01,
+    "region": "Sindh",
+    "id": 92643,
+    "wikiDataId": "Q8660",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Karachi is the capital city of the province of Sindh, Pakistan. It is the largest city in Pakistan and 12th largest in the world, with a population of over 20 million. It is situated at the southern tip of the country along the Arabian Sea coast and formerly served as the country's capital from 1947 to 1959.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Bahadurabad_Area_Karachi_City.jpg",
+    "cityLabel": [
+      "Karachi"
+    ],
+    "area": [
+      "3527"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Karachi%20from%20above.jpg"
+    ],
+    "osmId": "6080948",
+    "coordinateLocation": {
+      "lat": 24.86,
+      "lon": 67.01
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Urdu"
+    ],
+    "filmLabel": [
+      "administrative territorial entity"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Karachi%20City%20Flag.png"
+    ],
+    "timeZoneLabel": "UTC+05:00",
+    "area_km2": 0.003527
+  },
+  "Dhaka District": {
+    "city": "Dhaka District",
+    "country": "Bangladesh",
+    "country_code": "BD",
+    "population": "14,734,701",
+    "latitude": 23.81093,
+    "longitude": 90.36542,
+    "region": "Dhaka Division",
+    "id": 3577251,
+    "wikiDataId": "Q1850485",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Dhaka District"
+    ],
+    "area": [
+      "1463.6"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Dhaka-skyline-aymash.jpg"
+    ],
+    "osmId": "4773565",
+    "coordinateLocation": {
+      "lat": 23.7487,
+      "lon": 90.3921
+    },
+    "filmLabel": [
+      "district of Bangladesh"
+    ],
+    "sharesBorderWithLabel": [
+      "Tangail District"
+    ],
+    "timeZoneLabel": "UTC+06:00",
+    "area_km2": 0.0014636,
+    "officialSymbolLabel": []
+  },
+  "Kinshasa": {
+    "city": "Kinshasa",
+    "country": "Democratic Republic of the Congo",
+    "country_code": "CD",
+    "population": "14,565,700",
+    "latitude": -4.32758,
+    "longitude": 15.31357,
+    "region": "Kinshasa",
+    "id": 3453124,
+    "wikiDataId": "Q3838",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Kinshasa (; French: [kinʃasa]; Lingala: Kinsásá), formerly named Léopoldville from 1881–1966 (Dutch: Leopoldstad), is the capital and largest city of the Democratic Republic of the Congo. Kinshasa is one of the world's fastest-growing megacities, with an estimated population of 17.8 million in 2024. It is the most densely populated city in the DRC, the second-most populous city and third-largest metropolitan area in Africa, and the world's twenty-second most populous city and fourth-most populous capital city.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/COL-city_icon.png",
+    "cityLabel": [
+      "Kinshasa"
+    ],
+    "area": [
+      "9965"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Vue%20Kinshasa.jpg"
+    ],
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:Democratic+Republic+of+the+Congo/Kinshasa+City.map"
+    ],
+    "coordinateLocation": {
+      "lat": -4.321944444,
+      "lon": 15.311944444
+    },
+    "continentLabel": "Africa",
+    "officialLanguageLabel": [
+      "French"
+    ],
+    "filmLabel": [
+      "megacity"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Kinshasa%2C%20DRC.svg"
+    ],
+    "sharesBorderWithLabel": [
+      "Brazzaville"
+    ],
+    "timeZoneLabel": "UTC+01:00",
+    "nextToWaterLabel": [
+      "Congo"
+    ],
+    "area_km2": 0.009965
+  },
+  "Tokyo": {
+    "city": "Tokyo",
+    "country": "Japan",
+    "country_code": "JP",
+    "population": "14,264,798",
+    "latitude": 35.689444444,
+    "longitude": 139.691666666,
+    "region": "Tokyo",
+    "id": 3705817,
+    "wikiDataId": "Q1490",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Tokyo, officially the Tokyo Metropolis, is the capital and most populous city in Japan. With a population of over 14 million in the city proper in 2023, it is one of the most populous urban areas in the world. The Greater Tokyo Area, which includes Tokyo and parts of six neighboring prefectures, is the most populous metropolitan area in the world, with 41 million residents as of 2024.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Tokyo_Skyline20210123.jpg",
+    "cityLabel": [
+      "Tokyo"
+    ],
+    "area": [
+      "2194.05"
+    ],
+    "highestPoint": [
+      "http://www.wikidata.org/entity/Q1781878"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Tokyo%20Japan%20taken%20by%20Hodoyoshi-3%20Satellite.jpg"
+    ],
+    "osmId": "1543125",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:Japan/Tokyo.map"
+    ],
+    "coordinateLocation": {
+      "lat": 35.689444444,
+      "lon": 139.691666666
+    },
+    "continentLabel": "Asia",
+    "significantEventLabel": [
+      "1964 Summer Olympics"
+    ],
+    "filmLabel": [
+      "financial center"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Tokyo%20Metropolis.svg"
+    ],
+    "sharesBorderWithLabel": [
+      "Saitama Prefecture"
+    ],
+    "timeZoneLabel": "Japan Standard Time",
+    "nextToWaterLabel": [
+      "Tokyo Bay"
+    ],
+    "physicalFeatureLabel": [
+      "Kantō Plain"
+    ],
+    "area_km2": 0.0021940500000000003,
+    "highestPoint_m": null
+  },
+  "Faisalabad Division": {
+    "city": "Faisalabad Division",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "14,177,081",
+    "latitude": 31.25,
+    "longitude": 72.8,
+    "region": "Punjab",
+    "id": 3084723,
+    "wikiDataId": "Q3308246",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Faisalabad Division"
+    ],
+    "osmId": "16339052",
+    "coordinateLocation": {
+      "lat": 31.25,
+      "lon": 72.8
+    },
+    "filmLabel": [
+      "division of Pakistan"
+    ],
+    "officialSymbolLabel": []
+  },
+  "Ho Chi Minh City": {
+    "city": "Ho Chi Minh City",
+    "country": "Vietnam",
+    "country_code": "VN",
+    "population": "14,002,598",
+    "latitude": 10.82302,
+    "longitude": 106.62965,
+    "region": "Hải Dương",
+    "id": 3453217,
+    "wikiDataId": "Q1854",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Ho Chi Minh City (HCMC; Vietnamese: Thành phố Hồ Chí Minh, IPA: [tʰan˨˩ fow˦˥ how˨˩ cɪj˦˥ mɨn˧˧]), also known as Saigon (Vietnamese: Sài Gòn, IPA: [saːj˨˩ ɣɔŋ˨˩]), is the most populous city in Vietnam, with a population of 14,002,598 in 2025.\nThe city's geography is defined by rivers and canals, of which the largest is Saigon River. As the largest financial centre in Vietnam, Ho Chi Minh City has the largest gross regional domestic product out of all Vietnam provinces and municipalities, contributing around a quarter of the country's total GDP. Ho Chi Minh City's metropolitan area is ASEAN's 5th largest economy, also the biggest outside an ASEAN country capital.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Ho_Chi_Minh_City%2C_Nguyen_Hue_Street%2C_2020-01_CN-02.jpg",
+    "cityLabel": [
+      "Ho Chi Minh City"
+    ],
+    "area": [
+      "6772.59"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Ho%20Chi%20Minh%20City%20Skyline.jpg"
+    ],
+    "osmId": "1973756",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:Vietnam/Ho+Chi+Minh+City.map"
+    ],
+    "coordinateLocation": {
+      "lat": 10.775555555,
+      "lon": 106.701944444
+    },
+    "continentLabel": "Asia",
+    "significantEventLabel": [
+      "Siege of Saigon"
+    ],
+    "filmLabel": [
+      "city"
+    ],
+    "sharesBorderWithLabel": [
+      "Đồng Nai"
+    ],
+    "timeZoneLabel": "Indochina Time",
+    "nextToWaterLabel": [
+      "Saigon River"
+    ],
+    "area_km2": 0.00677259,
+    "officialSymbolLabel": []
+  },
+  "Tianjin": {
+    "city": "Tianjin",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "13,866,009",
+    "latitude": 39.146666666,
+    "longitude": 117.205555555,
+    "region": "Tianjin",
+    "id": 3710858,
+    "wikiDataId": "Q11736",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Tianjin"
+    ],
+    "area": [
+      "11920"
+    ],
+    "highestPoint": [
+      "http://www.wikidata.org/entity/Q28542154"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Tianjin%2C%20China%20ESA15420167.jpeg"
+    ],
+    "osmId": "912999",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:China/Tianjin.map"
+    ],
+    "coordinateLocation": {
+      "lat": 39.146666666,
+      "lon": 117.205555555
+    },
+    "continentLabel": "Asia",
+    "filmLabel": [
+      "city"
+    ],
+    "sharesBorderWithLabel": [
+      "Beijing"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.01192,
+    "highestPoint_m": null,
+    "officialSymbolLabel": []
+  },
+  "Moscow": {
+    "city": "Moscow",
+    "country": "Russia",
+    "country_code": "RU",
+    "population": "13,274,285",
+    "latitude": 55.750555555,
+    "longitude": 37.6175,
+    "region": "Moscow",
+    "id": 3710202,
+    "wikiDataId": "Q649",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Moscow is the capital and largest city of Russia, standing on the Moskva River in Central Russia. It has a population estimated at over 13 million residents within the city limits, over 19.1 million residents in the urban area, and over 21.5 million residents in its metropolitan area. The city covers an area of 2,511 square kilometers (970 sq mi), while the urban area covers 5,891 square kilometers (2,275 sq mi), and the metropolitan area covers over 26,000 square kilometers (10,000 sq mi).",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/COL-city_icon.png",
+    "cityLabel": [
+      "Moscow"
+    ],
+    "area": [
+      "2562"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Saint%20Basil%27s%20Cathedral%20and%20the%20Red%20Square.jpg"
+    ],
+    "osmId": "102269",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:Russia/Moscow.map"
+    ],
+    "coordinateLocation": {
+      "lat": 55.750555555,
+      "lon": 37.6175
+    },
+    "continentLabel": "Europe",
+    "officialLanguageLabel": [
+      "Russian"
+    ],
+    "significantEventLabel": [
+      "Moscow Metro"
+    ],
+    "filmLabel": [
+      "federal subject of Russia"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Moscow%2C%20Russia.svg"
+    ],
+    "sharesBorderWithLabel": [
+      "Moscow Oblast"
+    ],
+    "timeZoneLabel": "Moscow Time",
+    "nextToWaterLabel": [
+      "Moskva River"
+    ],
+    "physicalFeatureLabel": [
+      "East European Plain"
+    ],
+    "area_km2": 0.002562
+  },
+  "Lahore District": {
+    "city": "Lahore District",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "12,978,661",
+    "latitude": 31.416666666,
+    "longitude": 74.333333333,
+    "region": "Punjab",
+    "id": 3431471,
+    "wikiDataId": "Q2315527",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Lahore District"
+    ],
+    "area": [
+      "1772"
+    ],
+    "coordinateLocation": {
+      "lat": 31.416666666,
+      "lon": 74.333333333
+    },
+    "filmLabel": [
+      "district of Pakistan"
+    ],
+    "area_km2": 0.001772,
+    "officialSymbolLabel": []
+  },
+  "Xi'an": {
+    "city": "Xi'an",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "12,952,907",
+    "latitude": 34.261111111,
+    "longitude": 108.942222222,
+    "region": "Shaanxi",
+    "id": 3710359,
+    "wikiDataId": "Q5826",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Xi'an"
+    ],
+    "area": [
+      "10096.81"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/%E8%A5%BF%E5%AE%89%E9%92%9F%E6%A5%BC2020%20%281%29.jpg"
+    ],
+    "osmId": "3226004",
+    "coordinateLocation": {
+      "lat": 34.261111111,
+      "lon": 108.942222222
+    },
+    "continentLabel": "Asia",
+    "filmLabel": [
+      "megacity"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.01009681,
+    "officialSymbolLabel": []
+  },
+  "Suzhou": {
+    "city": "Suzhou",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "12,748,262",
+    "latitude": 31.3,
+    "longitude": 120.619444444,
+    "region": "Jiangsu",
+    "id": 3707722,
+    "wikiDataId": "Q42622",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Suzhou"
+    ],
+    "area": [
+      "8657.32"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/%E4%B8%9C%E6%96%B9%E4%B9%8B%E9%97%A81.jpg"
+    ],
+    "osmId": "4430941",
+    "coordinateLocation": {
+      "lat": 31.3,
+      "lon": 120.619444444
+    },
+    "filmLabel": [
+      "prefecture-level city"
+    ],
+    "sharesBorderWithLabel": [
+      "Shanghai"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Yangtze"
+    ],
+    "area_km2": 0.00865732,
+    "officialSymbolLabel": []
+  },
+  "Zhengzhou": {
+    "city": "Zhengzhou",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "12,600,574",
+    "latitude": 34.74919,
+    "longitude": 113.66051,
+    "region": "Henan",
+    "id": 3709500,
+    "wikiDataId": "Q30340",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Zhengzhou"
+    ],
+    "area": [
+      "7567.18"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/20220812%20Central%20Business%20District%20of%20Zhengdong%20New%20Area.jpg"
+    ],
+    "osmId": "3283765",
+    "coordinateLocation": {
+      "lat": 34.74919,
+      "lon": 113.66051
+    },
+    "filmLabel": [
+      "prefecture-level city"
+    ],
+    "sharesBorderWithLabel": [
+      "Luoyang"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.007567180000000001,
+    "officialSymbolLabel": []
+  },
+  "Bengaluru": {
+    "city": "Bengaluru",
+    "country": "India",
+    "country_code": "IN",
+    "population": "12,327,000",
+    "latitude": 12.97194,
+    "longitude": 77.59369,
+    "region": "Karnataka",
+    "id": 57700,
+    "wikiDataId": "Q1355",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Bengaluru, also known as Bangalore (its official name until 1 November 2014), is the capital and largest city of the southern Indian state of Karnataka. As per the 2011 census, the city had a population of 8.4 million, making it the third most populous city in India and the most populous in South India. The Bengaluru metropolitan area had a population of around 8.5 million, making it the fifth most populous urban agglomeration in the country.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/UB_City_at_night_.jpg",
+    "cityLabel": [
+      "Bengaluru"
+    ],
+    "area": [
+      "741"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/UB%20City.jpg"
+    ],
+    "osmId": "7902476",
+    "coordinateLocation": {
+      "lat": 12.9791198,
+      "lon": 77.5912997
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Kannada"
+    ],
+    "significantEventLabel": [
+      "Siege of Bangalore"
+    ],
+    "filmLabel": [
+      "megacity"
+    ],
+    "timeZoneLabel": "UTC+05:30",
+    "area_km2": 0.000741,
+    "officialSymbolLabel": []
+  },
+  "Wuhan": {
+    "city": "Wuhan",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "12,326,518",
+    "latitude": 30.595,
+    "longitude": 114.2975,
+    "region": "Hubei",
+    "id": 3710881,
+    "wikiDataId": "Q11746",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Wuhan"
+    ],
+    "area": [
+      "8569.15"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/%E6%AD%A6%E6%B1%89%E9%BB%84%E9%B9%A4%E6%A5%BC%E4%BF%AF%E7%9E%B0.jpg"
+    ],
+    "osmId": "3076268",
+    "coordinateLocation": {
+      "lat": 30.595,
+      "lon": 114.2975
+    },
+    "filmLabel": [
+      "sub-province-level division"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Yangtze"
+    ],
+    "area_km2": 0.00856915,
+    "officialSymbolLabel": []
+  },
+  "Multan Division": {
+    "city": "Multan Division",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "12,265,161",
+    "latitude": 30.0,
+    "longitude": 71.66667,
+    "region": "Punjab",
+    "id": 3084855,
+    "wikiDataId": "Q3824212",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Multan Division"
+    ],
+    "osmId": "16338501",
+    "coordinateLocation": {
+      "lat": 30.0,
+      "lon": 71.66667
+    },
+    "filmLabel": [
+      "division of Pakistan"
+    ],
+    "officialSymbolLabel": []
+  },
+  "Chongqing Shi": {
+    "city": "Chongqing Shi",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "12,135,000",
+    "latitude": 29.55,
+    "longitude": 106.55,
+    "region": "Chongqing",
+    "id": 3585413,
+    "wikiDataId": "Q15897817",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Chongqing Shi"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Chaotianmen%20Bridge%2C%20Nan%27an%20District%20of%20Chongqing.jpg"
+    ],
+    "coordinateLocation": {
+      "lat": 29.55,
+      "lon": 106.506944444
+    },
+    "continentLabel": "Asia",
+    "filmLabel": [
+      "urban agglomeration"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Yangtze"
+    ],
+    "officialSymbolLabel": []
+  },
+  "Hangzhou": {
+    "city": "Hangzhou",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "11,936,010",
+    "latitude": 30.25,
+    "longitude": 120.1675,
+    "region": "Zhejiang",
+    "id": 3712577,
+    "wikiDataId": "Q4970",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Hangzhou"
+    ],
+    "area": [
+      "16853.57"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Huanglong%20%26%20Broken%20Bridge%20-%20Hangzhou%20City%20%26%20West%20Lake%20near%20Broken%20Bridge.jpg"
+    ],
+    "osmId": "3221112",
+    "coordinateLocation": {
+      "lat": 30.25,
+      "lon": 120.1675
+    },
+    "filmLabel": [
+      "sub-province-level division"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Qiantang River"
+    ],
+    "area_km2": 0.01685357,
+    "officialSymbolLabel": []
+  },
+  "São Paulo": {
+    "city": "São Paulo",
+    "country": "Brazil",
+    "country_code": "BR",
+    "population": "11,904,961",
+    "latitude": -23.550394444,
+    "longitude": -46.633947222,
+    "region": "São Paulo",
+    "id": 3805183,
+    "wikiDataId": "Q174",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "São Paulo (; Portuguese: [sɐ̃w ˈpawlu] ; Portuguese for 'Saint Paul') is the capital city of the state of São Paulo, as well as the most populous city in Brazil, the Americas, and both the Western and Southern Hemispheres. Listed by the Globalization and World Cities Research Network (GaWC) as an alpha global city, it exerts substantial international influence in commerce, finance, arts, and entertainment. It is the largest urban area by population outside Asia and the most populous Portuguese-speaking city in the world.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Sao_Paulo_Brazil_Skyline_Aerial%2C_December_2024.jpg",
+    "cityLabel": [
+      "São Paulo"
+    ],
+    "area": [
+      "1523"
+    ],
+    "highestPoint": [
+      "http://www.wikidata.org/entity/Q2500246"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Sao%20Paulo%20Skyline%20in%20Brazil.jpg"
+    ],
+    "osmId": "298285",
+    "coordinateLocation": {
+      "lat": -23.550394444,
+      "lon": -46.633947222
+    },
+    "continentLabel": "South America",
+    "filmLabel": [
+      "city"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Bandeira%20da%20cidade%20de%20S%C3%A3o%20Paulo.svg"
+    ],
+    "sharesBorderWithLabel": [
+      "Osasco"
+    ],
+    "timeZoneLabel": "UTC−03:00",
+    "nextToWaterLabel": [
+      "Tietê River"
+    ],
+    "area_km2": 0.001523,
+    "highestPoint_m": null
+  },
+  "Greater Rio de Janeiro": {
+    "city": "Greater Rio de Janeiro",
+    "country": "Brazil",
+    "country_code": "BR",
+    "population": "11,900,000",
+    "latitude": -22.9028,
+    "longitude": -43.2078,
+    "region": "Rio de Janeiro",
+    "id": 2982624,
+    "wikiDataId": "Q2720540",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Greater Rio de Janeiro"
+    ],
+    "osmId": "10588599",
+    "coordinateLocation": {
+      "lat": -22.9028,
+      "lon": -43.2078
+    },
+    "filmLabel": [
+      "megacity"
+    ],
+    "officialSymbolLabel": []
+  },
+  "Baoding": {
+    "city": "Baoding",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "11,544,036",
+    "latitude": 38.86712,
+    "longitude": 115.48452,
+    "region": "Hebei",
+    "id": 3710791,
+    "wikiDataId": "Q58584",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Baoding"
+    ],
+    "area": [
+      "22184.95"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Baoding%20001.jpg"
+    ],
+    "osmId": "3442995",
+    "coordinateLocation": {
+      "lat": 38.86712,
+      "lon": 115.48452
+    },
+    "filmLabel": [
+      "prefecture-level city"
+    ],
+    "sharesBorderWithLabel": [
+      "Beijing"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.022184950000000002,
+    "officialSymbolLabel": []
+  },
+  "Bahawalpur Division": {
+    "city": "Bahawalpur Division",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "11,464,031",
+    "latitude": 28.5,
+    "longitude": 71.5,
+    "region": "Punjab",
+    "id": 3027953,
+    "wikiDataId": "Q4842510",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Bahawalpur Division"
+    ],
+    "osmId": "16338500",
+    "coordinateLocation": {
+      "lat": 28.5,
+      "lon": 71.5
+    },
+    "filmLabel": [
+      "division of Pakistan"
+    ],
+    "officialSymbolLabel": []
+  },
+  "Jakarta": {
+    "city": "Jakarta",
+    "country": "Indonesia",
+    "country_code": "ID",
+    "population": "11,135,191",
+    "latitude": -6.2,
+    "longitude": 106.83333,
+    "region": "Jakarta",
+    "id": 3453246,
+    "wikiDataId": "Q3630",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Jakarta, officially the Special Capital Region of Jakarta,  is the capital and largest city of Indonesia and an autonomous region at the provincial level. Lying on the northwest coast of Java, the world's most populous island, Jakarta is the largest metropole in Southeast Asia and serves as the diplomatic capital of ASEAN. The Special Region has a status equivalent to that of a province and is bordered by the province of West Java to the south and east and Banten to the west. Its coastline faces the Java Sea to the north, and it shares a maritime border with Lampung to the west.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Batavia_City_Hall_%28Jakarta_History_Museum%29_Fatahillah_Square_%282025%29_-_img_03.jpg",
+    "cityLabel": [
+      "Jakarta"
+    ],
+    "area": [
+      "662"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Jakarta.jpg"
+    ],
+    "osmId": "6362934",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:Indonesia/Jakarta+Raya.map"
+    ],
+    "coordinateLocation": {
+      "lat": -6.175277777,
+      "lon": 106.826944444
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Indonesian"
+    ],
+    "significantEventLabel": [
+      "transfer of the capital of Indonesia"
+    ],
+    "filmLabel": [
+      "province of Indonesia"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Jakarta%20%28vectorised%29.svg"
+    ],
+    "sharesBorderWithLabel": [
+      "Banten"
+    ],
+    "timeZoneLabel": "UTC+07:00",
+    "nextToWaterLabel": [
+      "Java Sea"
+    ],
+    "physicalFeatureLabel": [
+      "Java"
+    ],
+    "area_km2": 0.000662
+  },
+  "Lahore": {
+    "city": "Lahore",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "11,126,285",
+    "latitude": 31.549722222,
+    "longitude": 74.343611111,
+    "region": "Punjab",
+    "id": 3710857,
+    "wikiDataId": "Q11739",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Lahore is the capital and largest city of the Pakistani province of Punjab. It is the second-largest city in Pakistan, after Karachi, and 27th largest in the world, with a population of over 14 million. Lahore is one of Pakistan's major industrial, educational and economic hubs.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/COL-city_icon.png",
+    "cityLabel": [
+      "Lahore"
+    ],
+    "area": [
+      "1772"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Eye%20Of%20Lahore%20%28Minar%20e%20Pakistan%29%20evening.jpg"
+    ],
+    "coordinateLocation": {
+      "lat": 31.549722222,
+      "lon": 74.343611111
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Urdu"
+    ],
+    "filmLabel": [
+      "city"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Lahore%20City%20Flag.png"
+    ],
+    "timeZoneLabel": "UTC+05:00",
+    "physicalFeatureLabel": [
+      "Pothohar Plateau"
+    ],
+    "area_km2": 0.001772
+  },
+  "Thane district": {
+    "city": "Thane district",
+    "country": "India",
+    "country_code": "IN",
+    "population": "11,060,148",
+    "latitude": 19.2,
+    "longitude": 72.97,
+    "region": "Maharashtra",
+    "id": 3184771,
+    "wikiDataId": "Q943099",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Thane district"
+    ],
+    "area": [
+      "4214"
+    ],
+    "osmId": "7965684",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:India/Maharashtra/Thane+(2011).map"
+    ],
+    "coordinateLocation": {
+      "lat": 19.2,
+      "lon": 72.97
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Marathi"
+    ],
+    "filmLabel": [
+      "district of India"
+    ],
+    "sharesBorderWithLabel": [
+      "Pune district"
+    ],
+    "timeZoneLabel": "UTC+05:30",
+    "area_km2": 0.004214,
+    "officialSymbolLabel": []
+  },
+  "Linyi": {
+    "city": "Linyi",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "11,018,365",
+    "latitude": 35.10408,
+    "longitude": 118.35019,
+    "region": "Shandong",
+    "id": 3714126,
+    "wikiDataId": "Q373346",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Linyi"
+    ],
+    "area": [
+      "17191.21"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Linyi%20montage.png"
+    ],
+    "osmId": "2801712",
+    "coordinateLocation": {
+      "lat": 35.10408,
+      "lon": 118.35019
+    },
+    "continentLabel": "Asia",
+    "officialLanguageLabel": [
+      "Putonghua"
+    ],
+    "filmLabel": [
+      "prefecture-level city"
+    ],
+    "sharesBorderWithLabel": [
+      "Xuzhou"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Shu River"
+    ],
+    "area_km2": 0.01719121,
+    "officialSymbolLabel": []
+  },
+  "Dera Ghazi Khan District": {
+    "city": "Dera Ghazi Khan District",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "11,014,398",
+    "latitude": 30.475,
+    "longitude": 70.40447,
+    "region": "Punjab",
+    "id": 3833038,
+    "wikiDataId": "Q2315476",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Dera Ghazi Khan District"
+    ],
+    "area": [
+      "3814"
+    ],
+    "coordinateLocation": {
+      "lat": 30.475,
+      "lon": 70.40447
+    },
+    "filmLabel": [
+      "district of Pakistan"
+    ],
+    "sharesBorderWithLabel": [
+      "Musakhel District"
+    ],
+    "area_km2": 0.003814,
+    "officialSymbolLabel": []
+  },
+  "Shijiazhuang": {
+    "city": "Shijiazhuang",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "10,640,458",
+    "latitude": 38.0425,
+    "longitude": 114.51,
+    "region": "Hebei",
+    "id": 3711228,
+    "wikiDataId": "Q58401",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Shijiazhuang"
+    ],
+    "area": [
+      "14060.14"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Zhuangli%20Commercial%20Street%205.jpg"
+    ],
+    "osmId": "3009732",
+    "coordinateLocation": {
+      "lat": 38.0425,
+      "lon": 114.51
+    },
+    "filmLabel": [
+      "prefecture-level city"
+    ],
+    "sharesBorderWithLabel": [
+      "Shanxi"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.014060139999999999,
+    "officialSymbolLabel": []
+  },
+  "Dongguan": {
+    "city": "Dongguan",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "10,466,625",
+    "latitude": 23.01797,
+    "longitude": 113.74866,
+    "region": "Guangdong",
+    "id": 3709516,
+    "wikiDataId": "Q59218",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Dongguan"
+    ],
+    "area": [
+      "2460.08"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Dongguan%20montage.jpg"
+    ],
+    "osmId": "3464319",
+    "coordinateLocation": {
+      "lat": 23.04749,
+      "lon": 113.74928
+    },
+    "continentLabel": "Asia",
+    "filmLabel": [
+      "prefecture-level city"
+    ],
+    "sharesBorderWithLabel": [
+      "Shenzhen"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "nextToWaterLabel": [
+      "Pearl River"
+    ],
+    "area_km2": 0.00246008,
+    "officialSymbolLabel": []
+  },
+  "Qingdao": {
+    "city": "Qingdao",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "10,071,722",
+    "latitude": 36.116666666,
+    "longitude": 120.4,
+    "region": "Shandong",
+    "id": 3706686,
+    "wikiDataId": "Q170322",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Qingdao"
+    ],
+    "area": [
+      "11282"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9D%92%E5%B2%9B%E6%B5%AE%E5%B1%B1%E6%B9%BE%E6%97%A5%E6%99%AF%E6%98%A5.jpg"
+    ],
+    "osmId": "3469133",
+    "coordinateLocation": {
+      "lat": 36.116666666,
+      "lon": 120.4
+    },
+    "significantEventLabel": [
+      "Siege of Tsingtao"
+    ],
+    "filmLabel": [
+      "sub-province-level division"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.011282,
+    "officialSymbolLabel": []
+  },
+  "Changsha": {
+    "city": "Changsha",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "10,047,914",
+    "latitude": 28.19874,
+    "longitude": 112.97087,
+    "region": "Hunan",
+    "id": 3712193,
+    "wikiDataId": "Q174091",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Changsha"
+    ],
+    "area": [
+      "11815.96"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Helong%20Stadium.jpg"
+    ],
+    "osmId": "3202711",
+    "coordinateLocation": {
+      "lat": 28.19874,
+      "lon": 112.97087
+    },
+    "filmLabel": [
+      "prefecture-level city"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.011815959999999999,
+    "officialSymbolLabel": []
+  },
+  "Los Angeles County": {
+    "city": "Los Angeles County",
+    "country": "United States",
+    "country_code": "US",
+    "population": "10,014,009",
+    "latitude": 34.05,
+    "longitude": -118.25,
+    "region": "California",
+    "id": 172136,
+    "wikiDataId": "Q104994",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Los Angeles County"
+    ],
+    "area": [
+      "12308"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Los%20Angeles%2C%20CA%20from%20the%20air.jpg"
+    ],
+    "osmId": "396479",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:United+States/California/Los+Angeles+County.map"
+    ],
+    "coordinateLocation": {
+      "lat": 34.05,
+      "lon": -118.25
+    },
+    "filmLabel": [
+      "county of California"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Los%20Angeles%20County%2C%20California.svg"
+    ],
+    "sharesBorderWithLabel": [
+      "Orange County"
+    ],
+    "timeZoneLabel": "Pacific Time Zone",
+    "physicalFeatureLabel": [
+      "Southern California"
+    ],
+    "area_km2": 0.012308
+  },
+  "Harbin": {
+    "city": "Harbin",
+    "country": "People's Republic of China",
+    "country_code": "CN",
+    "population": "10,009,854",
+    "latitude": 45.75,
+    "longitude": 126.633333333,
+    "region": "Heilongjiang",
+    "id": 3711194,
+    "wikiDataId": "Q42956",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Harbin"
+    ],
+    "area": [
+      "53076.48"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/26941-Harbin%20%2849027716202%29.jpg"
+    ],
+    "osmId": "2755608",
+    "coordinateLocation": {
+      "lat": 45.75,
+      "lon": 126.633333333
+    },
+    "filmLabel": [
+      "city"
+    ],
+    "timeZoneLabel": "UTC+08:00",
+    "area_km2": 0.05307648,
+    "officialSymbolLabel": []
+  },
+  "North 24 Parganas district": {
+    "city": "North 24 Parganas district",
+    "country": "India",
+    "country_code": "IN",
+    "population": "10,009,781",
+    "latitude": 22.716666666,
+    "longitude": 88.483333333,
+    "region": "West Bengal",
+    "id": 147877,
+    "wikiDataId": "Q338425",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "North 24 Parganas district"
+    ],
+    "area": [
+      "4094"
+    ],
+    "osmId": "9513028",
+    "geoShape": [
+      "http://commons.wikimedia.org/data/main/Data:India/West+Bengal/North+24+Parganas.map"
+    ],
+    "coordinateLocation": {
+      "lat": 22.716666666,
+      "lon": 88.483333333
+    },
+    "filmLabel": [
+      "district of India"
+    ],
+    "sharesBorderWithLabel": [
+      "Hooghly district"
+    ],
+    "timeZoneLabel": "UTC+05:30",
+    "area_km2": 0.004094,
+    "officialSymbolLabel": []
+  },
+  "Rawalpindi Division": {
+    "city": "Rawalpindi Division",
+    "country": "Pakistan",
+    "country_code": "PK",
+    "population": "10,007,821",
+    "latitude": 33.16664,
+    "longitude": 72.99974,
+    "region": "Punjab",
+    "id": 3061150,
+    "wikiDataId": "Q3308218",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": null,
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": null,
+    "cityLabel": [
+      "Rawalpindi Division"
+    ],
+    "area": [
+      "22255"
+    ],
+    "osmId": "16341699",
+    "coordinateLocation": {
+      "lat": 33.16664,
+      "lon": 72.99974
+    },
+    "filmLabel": [
+      "division of Pakistan"
+    ],
+    "area_km2": 0.022255,
+    "officialSymbolLabel": []
+  },
+  "Lima": {
+    "city": "Lima",
+    "country": "Peru",
+    "country_code": "PE",
+    "population": "9,943,800",
+    "latitude": -12.04318,
+    "longitude": -77.02824,
+    "region": "Lima Department",
+    "id": 86391,
+    "wikiDataId": "Q2868",
+    "continent": null,
+    "wikiDataURL": null,
+    "summary": "Lima is the capital and largest city of Peru. It is located in the valleys of the Chillón, Rímac and Lurín Rivers, in the desert zone of the central coastal part of the country, overlooking the Pacific Ocean. The city is considered the political, cultural, financial and commercial center of Peru.",
+    "languages": [],
+    "currencies": [],
+    "timezones": [],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Miraflores_Costa_Verde_Skyline_%28Lima%2C_Peru%29.jpg",
+    "cityLabel": [
+      "Lima"
+    ],
+    "area": [
+      "2672.28"
+    ],
+    "aerialView": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Plaza%20Mayor%20de%20Lima-1.jpg"
+    ],
+    "osmId": "12933390",
+    "coordinateLocation": {
+      "lat": -12.06,
+      "lon": -77.0375
+    },
+    "continentLabel": "South America",
+    "filmLabel": [
+      "city"
+    ],
+    "officialSymbolLabel": [
+      "http://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Lima.svg"
+    ],
+    "timeZoneLabel": "UTC−05:00",
+    "nextToWaterLabel": [
+      "Rímac River"
+    ],
+    "area_km2": 0.0026722800000000004
+  }
+}

@@ -1,0 +1,7 @@
+openai
+wikipedia
+tabulate
+pygame
+colorama
+requests
+certifi

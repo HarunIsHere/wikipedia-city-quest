@@ -1,0 +1,156 @@
+[
+  {
+    "question_type": "population",
+    "question": "This city has a population of 16,123,984. Which city is it?",
+    "correct_answer": "Gujranwala Division",
+    "options": [
+      "Gujranwala Division",
+      "São Paulo",
+      "Zhengzhou",
+      "Wuhan"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Pakistan. Which city is it?",
+    "correct_answer": "Gujranwala Division",
+    "options": [
+      "Baoding",
+      "Changsha",
+      "Gujranwala Division",
+      "Hangzhou"
+    ]
+  },
+  {
+    "question_type": "population",
+    "question": "This city has a population of 14,933,274. Which city is it?",
+    "correct_answer": "Beijing Shi",
+    "options": [
+      "Beijing Shi",
+      "Lima",
+      "Karachi",
+      "Chongqing Shi"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country People's Republic of China. Which city is it?",
+    "correct_answer": "Beijing Shi",
+    "options": [
+      "Zhengzhou",
+      "Guangzhou",
+      "Beijing Shi",
+      "Suzhou"
+    ]
+  },
+  {
+    "question_type": "population",
+    "question": "This city has a population of 14,177,081. Which city is it?",
+    "correct_answer": "Faisalabad Division",
+    "options": [
+      "Lahore District",
+      "Jakarta",
+      "Lagos",
+      "Faisalabad Division"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Pakistan. Which city is it?",
+    "correct_answer": "Faisalabad Division",
+    "options": [
+      "Faisalabad Division",
+      "Suzhou",
+      "Moscow",
+      "Los Angeles County"
+    ]
+  },
+  {
+    "question_type": "population",
+    "question": "This city has a population of 12,265,161. Which city is it?",
+    "correct_answer": "Multan Division",
+    "options": [
+      "Multan Division",
+      "Istanbul",
+      "Dhaka",
+      "Baoding"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Pakistan. Which city is it?",
+    "correct_answer": "Multan Division",
+    "options": [
+      "Baoding",
+      "Chongqing",
+      "Multan Division",
+      "Shenzhen"
+    ]
+  },
+  {
+    "question_type": "population",
+    "question": "This city has a population of 12,135,000. Which city is it?",
+    "correct_answer": "Chongqing Shi",
+    "options": [
+      "Lima",
+      "Ho Chi Minh City",
+      "Dera Ghazi Khan District",
+      "Chongqing Shi"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country People's Republic of China. Which city is it?",
+    "correct_answer": "Chongqing Shi",
+    "options": [
+      "São Paulo",
+      "Chongqing Shi",
+      "Bengaluru",
+      "Faisalabad Division"
+    ]
+  },
+  {
+    "question_type": "population",
+    "question": "This city has a population of 11,900,000. Which city is it?",
+    "correct_answer": "Greater Rio de Janeiro",
+    "options": [
+      "Greater Rio de Janeiro",
+      "North 24 Parganas district",
+      "Moscow",
+      "Harbin"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Brazil. Which city is it?",
+    "correct_answer": "Greater Rio de Janeiro",
+    "options": [
+      "Greater Rio de Janeiro",
+      "Karachi",
+      "Dera Ghazi Khan District",
+      "Istanbul"
+    ]
+  },
+  {
+    "question_type": "population",
+    "question": "This city has a population of 11,464,031. Which city is it?",
+    "correct_answer": "Bahawalpur Division",
+    "options": [
+      "Dera Ghazi Khan District",
+      "Bahawalpur Division",
+      "Suzhou",
+      "Tianjin"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Pakistan. Which city is it?",
+    "correct_answer": "Bahawalpur Division",
+    "options": [
+      "Multan Division",
+      "Bengaluru",
+      "Shanghai",
+      "Bahawalpur Division"
+    ]
+  }
+]
