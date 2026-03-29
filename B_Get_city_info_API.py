@@ -1,21 +1,19 @@
 import json
-import random
+import os
 import time
-from collections import defaultdict
 
 import certifi
 import requests
 import wikipedia
 
 
-TOP_N = 50
-LIMIT_PER_REQUEST = 10
-OUTPUT_FILE = "city_info_api.json"
-DELAY = 1
-MAX_RETRIES = 5
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CITY_LIST_FILE = os.path.join(BASE_DIR, "city_list.json")
+OUTPUT_FILE = os.path.join(BASE_DIR, "City_Info_API.json")
 
 GEODB_HOST = "wft-geo-db.p.rapidapi.com"
-GEODB_KEY = "60b10cec3dmsh63212fbfa712c74p1cd6e7jsnb17850f361ad"
+GEODB_KEY = "YOUR_RAPIDAPI_KEY_HERE"
+DELAY = 1
 
 HEADERS_GEODB = {
     "X-RapidAPI-Key": GEODB_KEY,
@@ -25,105 +23,93 @@ HEADERS_GEODB = {
 }
 
 HEADERS_WIKIDATA = {
-    "User-Agent": "CityInfoFetcher/1.0 (harunayarturk@gmail.com)",
+    "User-Agent": "CityInfoFetcher/1.0 (your_email@example.com)",
 }
 
 WD_ENDPOINT = "https://query.wikidata.org/sparql"
 
 
-def fetch_top_cities(top_n=TOP_N):
-    """Fetch top cities by population."""
-    cities = {}
-    offset = 0
+def load_city_list():
+    """Load the curated list of playable cities."""
+    with open(CITY_LIST_FILE, "r", encoding="utf-8") as file:
+        return json.load(file)
 
-    while len(cities) < top_n:
-        url = f"https://{GEODB_HOST}/v1/geo/cities"
-        params = {
-            "sort": "-population",
-            "limit": LIMIT_PER_REQUEST,
-            "offset": offset,
-        }
 
-        try:
-            response = requests.get(
-                url,
-                headers=HEADERS_GEODB,
-                params=params,
-                timeout=30,
-            )
+def fetch_city_base_data(city_name):
+    """Fetch one city's base data from GeoDB using the curated city name."""
+    url = f"https://{GEODB_HOST}/v1/geo/cities"
+    params = {
+        "namePrefix": city_name,
+        "limit": 10,
+        "sort": "-population",
+    }
 
-            if response.status_code == 429:
-                print("⚠️ Processing.... please wait.")
-                time.sleep(DELAY * 5)
-                continue
+    response = requests.get(
+        url,
+        headers=HEADERS_GEODB,
+        params=params,
+        timeout=30,
+    )
+    response.raise_for_status()
 
-            if response.status_code == 403:
-                print("❌ Forbidden: check API key or subscription.")
-                break
+    items = response.json().get("data", [])
+    if not items:
+        return None
 
-            response.raise_for_status()
-            data = response.json()
-        except requests.RequestException as error:
-            print(f"❌ HTTP error fetching cities: {error}")
+    exact_match = None
+    fallback_match = None
+
+    for item in items:
+        item_city = (item.get("city") or "").strip()
+        item_name = (item.get("name") or "").strip()
+
+        if item_city.lower() == city_name.lower():
+            exact_match = item
             break
 
-        items = data.get("data", [])
-        if not items:
+        if item_name.lower() == city_name.lower():
+            exact_match = item
             break
 
-        for item in items:
-            city_name = item.get("name")
-            if city_name in cities:
-                continue
+        if fallback_match is None:
+            fallback_match = item
 
-            cities[city_name] = {
-                "city": item.get("city"),
-                "country": item.get("country"),
-                "country_code": item.get("countryCode"),
-                "population": item.get("population"),
-                "latitude": item.get("latitude"),
-                "longitude": item.get("longitude"),
-                "region": item.get("region"),
-                "id": item.get("id"),
-                "wikiDataId": item.get("wikiDataId"),
-                "continent": None,
-                "wikiDataURL": None,
-                "summary": None,
-                "languages": [],
-                "currencies": [],
-                "timezones": [],
-                "image_url": None,
-            }
+    selected = exact_match or fallback_match
+    if selected is None:
+        return None
 
-            if len(cities) >= top_n:
-                break
-
-        offset += LIMIT_PER_REQUEST
-
-        if len(cities) < top_n:
-            time.sleep(DELAY)
-
-    print(f"✅ Retrieved the top {len(cities)} global cities (by population).")
-    return cities
+    return {
+        "city": selected.get("city") or city_name,
+        "country": selected.get("country"),
+        "country_code": selected.get("countryCode"),
+        "population": selected.get("population"),
+        "latitude": selected.get("latitude"),
+        "longitude": selected.get("longitude"),
+        "region": selected.get("region"),
+        "id": selected.get("id"),
+        "wikiDataId": selected.get("wikiDataId"),
+        "continent": None,
+        "wikiDataURL": None,
+        "summary": None,
+        "languages": [],
+        "currencies": [],
+        "timezones": [],
+        "image_url": None,
+    }
 
 
 def query_wikidata(qid):
-    """Query Wikidata for city attributes using requests and certifi."""
+    """Query Wikidata for selected city attributes."""
     query = f"""
-    SELECT ?cityLabel ?continentLabel ?officialLanguageLabel ?significantEventLabel
-           ?area ?highestPoint ?aerialView ?osmId ?filmLabel ?officialSymbolLabel
-           ?sharesBorderWithLabel ?geoShape ?coordinateLocation ?timeZoneLabel
-           ?nextToWaterLabel ?physicalFeatureLabel
+    SELECT ?cityLabel ?continentLabel ?officialLanguageLabel
+           ?area ?osmId ?filmLabel ?officialSymbolLabel
+           ?sharesBorderWithLabel ?geoShape ?coordinateLocation
+           ?timeZoneLabel ?nextToWaterLabel ?physicalFeatureLabel
     WHERE {{
-      wd:{qid} rdfs:label ?cityLabel .
-      FILTER(LANG(?cityLabel) = "en")
-
+      OPTIONAL {{ wd:{qid} rdfs:label ?cityLabel FILTER(LANG(?cityLabel) = "en") }}
       OPTIONAL {{ wd:{qid} wdt:P30 ?continent. }}
       OPTIONAL {{ wd:{qid} wdt:P37 ?officialLanguage. }}
-      OPTIONAL {{ wd:{qid} wdt:P793 ?significantEvent. }}
       OPTIONAL {{ wd:{qid} wdt:P2046 ?area. }}
-      OPTIONAL {{ wd:{qid} wdt:P610 ?highestPoint. }}
-      OPTIONAL {{ wd:{qid} wdt:P18 ?aerialView. }}
       OPTIONAL {{ wd:{qid} wdt:P402 ?osmId. }}
       OPTIONAL {{ wd:{qid} wdt:P31 ?film. }}
       OPTIONAL {{ wd:{qid} wdt:P41 ?officialSymbol. }}
@@ -154,130 +140,36 @@ def query_wikidata(qid):
         if not bindings:
             return {}
 
-        data = defaultdict(list)
-        for key, value in bindings[0].items():
-            data[key].append(value.get("value"))
+        binding = bindings[0]
+        data = {}
 
-        if "area" in data:
+        for key, value in binding.items():
+            data[key] = value.get("value")
+
+        area_value = data.get("area")
+        if area_value is not None:
             try:
-                data["area_km2"] = [float(data["area"][0]) / 1_000_000]
-            except (TypeError, ValueError, IndexError):
+                data["area_km2"] = round(float(area_value), 2)
+            except (TypeError, ValueError):
                 data["area_km2"] = None
+        else:
+            data["area_km2"] = None
 
-        if "highestPoint" in data:
+        coordinate_value = data.get("coordinateLocation")
+        if coordinate_value and coordinate_value.startswith("Point("):
             try:
-                data["highestPoint_m"] = [float(data["highestPoint"][0])]
-            except (TypeError, ValueError, IndexError):
-                data["highestPoint_m"] = None
+                lon, lat = map(
+                    float,
+                    coordinate_value.replace("Point(", "").replace(")", "").split(),
+                )
+                data["coordinateLocation"] = {"lat": lat, "lon": lon}
+            except (TypeError, ValueError):
+                data["coordinateLocation"] = None
 
-        for key in ["filmLabel", "officialSymbolLabel"]:
-            if key not in data:
-                data[key] = []
-
-        return dict(data)
+        return data
 
     except requests.RequestException:
         return {}
-
-
-def enrich_city(cities_dict):
-    """Enrich city data with Wikidata information."""
-    enriched = {}
-    print("⚠️ Enriching city data - please wait...")
-
-    for city_name, city_data in cities_dict.items():
-        qid = city_data.get("wikiDataId")
-        if not qid:
-            enriched[city_name] = city_data
-            continue
-
-        wikidata_info = query_wikidata(qid)
-
-        for key in [
-            "continentLabel",
-            "highestPoint_m",
-            "area_km2",
-            "osmId",
-            "coordinateLocation",
-            "timeZoneLabel",
-        ]:
-            if key in wikidata_info and wikidata_info[key]:
-                wikidata_info[key] = wikidata_info[key][0]
-
-        if (
-            "coordinateLocation" in wikidata_info
-            and wikidata_info["coordinateLocation"]
-        ):
-            coord = wikidata_info["coordinateLocation"]
-            if coord.startswith("Point(") and coord.endswith(")"):
-                try:
-                    lon, lat = map(
-                        float,
-                        coord.replace("Point(", "").replace(")", "").split(),
-                    )
-                    wikidata_info["coordinateLocation"] = {
-                        "lat": lat,
-                        "lon": lon,
-                    }
-                except (TypeError, ValueError):
-                    wikidata_info["coordinateLocation"] = None
-
-        for list_key in ["filmLabel", "officialSymbolLabel"]:
-            if list_key not in wikidata_info:
-                wikidata_info[list_key] = []
-
-        city_data.update(wikidata_info)
-        enriched[city_name] = city_data
-
-    return enriched
-
-
-def add_wikipedia_summary_and_image(cities):
-    """Add Wikipedia summary and image URL to each city."""
-    for city_name, info in cities.items():
-        country = info.get("country")
-        query = f"{city_name}, {country}" if country else city_name
-
-        try:
-            page = wikipedia.page(query, auto_suggest=False)
-            summary = wikipedia.summary(query, sentences=3, auto_suggest=False)
-
-            image_url = get_city_image(page.images)
-            info["summary"] = summary
-            info["image_url"] = image_url
-
-        except wikipedia.exceptions.DisambiguationError as error:
-            options = [
-                option
-                for option in error.options
-                if "city" in option.lower() or "capital" in option.lower()
-            ]
-            if options:
-                try:
-                    page = wikipedia.page(options[0], auto_suggest=False)
-                    summary = " ".join(page.summary.split(". ")[:3])
-                    image_url = get_city_image(page.images)
-                    info["summary"] = summary
-                    info["image_url"] = image_url
-                except Exception:
-                    info["summary"] = None
-                    info["image_url"] = None
-            else:
-                info["summary"] = None
-                info["image_url"] = None
-
-        except wikipedia.exceptions.PageError:
-            info["summary"] = None
-            info["image_url"] = None
-
-        except Exception:
-            info["summary"] = None
-            info["image_url"] = None
-
-        time.sleep(random.uniform(0.5, 1.5))
-
-    print("✅ Added Wikipedia summaries")
-    return cities
 
 
 def get_city_image(images):
@@ -299,6 +191,7 @@ def get_city_image(images):
         "satellite",
         "shield",
         "diagram",
+        "icon",
     ]
     preferred_ext = (".jpg", ".jpeg", ".png", ".webp")
 
@@ -306,14 +199,14 @@ def get_city_image(images):
         image
         for image in images
         if image.lower().endswith(preferred_ext)
-        and not any(bad in image.lower() for bad in banned_keywords)
+        and not any(keyword in image.lower() for keyword in banned_keywords)
     ]
 
     candidates.sort(
         key=lambda image: (
             "skyline" in image.lower() or "city" in image.lower(),
             "wikimedia" in image.lower(),
-            len(image),
+            -len(image),
         ),
         reverse=True,
     )
@@ -321,20 +214,104 @@ def get_city_image(images):
     return candidates[0] if candidates else None
 
 
-def save_to_json(data, filename=OUTPUT_FILE):
-    """Save city data to JSON."""
-    for info in data.values():
-        if info.get("population") is not None:
-            info["population"] = f"{info['population']:,}"
+def add_wikipedia_summary_and_image(city_name, city_info):
+    """Fetch city summary and image from Wikipedia."""
+    country = city_info.get("country")
+    query = f"{city_name}, {country}" if country else city_name
 
+    try:
+        page = wikipedia.page(query, auto_suggest=False)
+        summary = wikipedia.summary(query, sentences=3, auto_suggest=False)
+        city_info["summary"] = summary
+        city_info["image_url"] = get_city_image(page.images)
+        return city_info
+    except wikipedia.exceptions.DisambiguationError as error:
+        for option in error.options:
+            if city_name.lower() in option.lower():
+                try:
+                    page = wikipedia.page(option, auto_suggest=False)
+                    city_info["summary"] = wikipedia.summary(
+                        option,
+                        sentences=3,
+                        auto_suggest=False,
+                    )
+                    city_info["image_url"] = get_city_image(page.images)
+                    return city_info
+                except Exception:
+                    continue
+    except wikipedia.exceptions.PageError:
+        pass
+    except Exception:
+        pass
+
+    city_info["summary"] = None
+    city_info["image_url"] = None
+    return city_info
+
+
+def build_city_info():
+    """Build city info only for the curated playable city list."""
+    cities = load_city_list()
+    city_info_data = {}
+
+    for city_name in cities:
+        print(f"Fetching data for {city_name} ...")
+
+        try:
+            base_data = fetch_city_base_data(city_name)
+        except requests.RequestException as error:
+            print(f"❌ Could not fetch base data for {city_name}: {error}")
+            base_data = None
+
+        if base_data is None:
+            city_info_data[city_name] = {
+                "city": city_name,
+                "country": None,
+                "country_code": None,
+                "population": None,
+                "latitude": None,
+                "longitude": None,
+                "region": None,
+                "id": None,
+                "wikiDataId": None,
+                "continent": None,
+                "wikiDataURL": None,
+                "summary": None,
+                "languages": [],
+                "currencies": [],
+                "timezones": [],
+                "image_url": None,
+            }
+            continue
+
+        qid = base_data.get("wikiDataId")
+        if qid:
+            wikidata_data = query_wikidata(qid)
+            base_data.update(wikidata_data)
+
+            if "continentLabel" in base_data:
+                base_data["continent"] = base_data["continentLabel"]
+
+            if "officialLanguageLabel" in base_data:
+                base_data["languages"] = [base_data["officialLanguageLabel"]]
+
+            if "timeZoneLabel" in base_data:
+                base_data["timezones"] = [base_data["timeZoneLabel"]]
+
+        base_data = add_wikipedia_summary_and_image(city_name, base_data)
+        city_info_data[city_name] = base_data
+        time.sleep(DELAY)
+
+    return city_info_data
+
+
+def save_to_json(data, filename=OUTPUT_FILE):
+    """Save city info data to JSON."""
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=2, ensure_ascii=False)
 
 
 if __name__ == "__main__":
-    top_cities = fetch_top_cities(TOP_N)
-    enriched_data = enrich_city(top_cities)
-    enriched_data = add_wikipedia_summary_and_image(enriched_data)
-    save_to_json(enriched_data)
+    city_info = build_city_info()
+    save_to_json(city_info)
     print(f"✅ Data saved to {OUTPUT_FILE}")
-

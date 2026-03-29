@@ -9,44 +9,83 @@ import wikipedia
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CITY_LIST_FILE = os.path.join(BASE_DIR, "city_list.json")
+CITY_INFO_FILE = os.path.join(BASE_DIR, "City_Info_API.json")
 SUMMARIES_FILE = os.path.join(BASE_DIR, "wiki_city_summaries.json")
 
 
-def fetch_and_mask_city_summary(city_name):
-    """Fetch and mask a short Wikipedia summary for a city."""
-    try:
-        summary = wikipedia.summary(
-            city_name,
-            sentences=random.choice([2, 3]),
-        )
-    except wikipedia.exceptions.DisambiguationError:
-        return "No summary found for this city."
-    except wikipedia.exceptions.PageError:
-        return "No summary found for this city."
-    except Exception as error:
-        return f"Error retrieving summary: {error}"
+def load_city_list():
+    """Load the curated list of playable cities."""
+    with open(CITY_LIST_FILE, "r", encoding="utf-8") as file:
+        return json.load(file)
 
-    summary_masked = re.sub(
+
+def load_city_info():
+    """Load generated city info if available."""
+    with open(CITY_INFO_FILE, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+def clean_summary(summary, city_name):
+    """Mask the city name and remove parenthetical text."""
+    masked_summary = re.sub(
         rf"\b{re.escape(city_name)}\b",
         "*****",
         summary,
         flags=re.IGNORECASE,
     )
-    summary_masked = re.sub(r"\([^)]*\)", "*****", summary_masked)
+    masked_summary = re.sub(r"\([^)]*\)", "*****", masked_summary)
+    masked_summary = re.sub(r"\s+", " ", masked_summary).strip()
+    return textwrap.fill(masked_summary, width=80)
 
-    return textwrap.fill(summary_masked.strip(), width=80)
+
+def fetch_city_summary(city_name, country=None):
+    """Fetch a safer city summary from Wikipedia using city and country."""
+    queries = []
+
+    if country:
+        queries.append(f"{city_name}, {country}")
+
+    queries.append(city_name)
+
+    for query in queries:
+        try:
+            summary = wikipedia.summary(query, sentences=random.choice([2, 3]))
+            return clean_summary(summary, city_name)
+        except wikipedia.exceptions.DisambiguationError as error:
+            for option in error.options:
+                option_lower = option.lower()
+                if city_name.lower() in option_lower:
+                    try:
+                        summary = wikipedia.summary(
+                            option,
+                            sentences=random.choice([2, 3]),
+                        )
+                        return clean_summary(summary, city_name)
+                    except Exception:
+                        continue
+        except wikipedia.exceptions.PageError:
+            continue
+        except Exception:
+            continue
+
+    return "No summary found for this city."
 
 
 def build_city_summaries():
-    """Generate and save Wikipedia summaries for all cities."""
-    with open(CITY_LIST_FILE, "r", encoding="utf-8") as file:
-        city_list = json.load(file)
+    """Generate summaries for the curated playable city list."""
+    city_list = load_city_list()
+
+    try:
+        city_info = load_city_info()
+    except FileNotFoundError:
+        city_info = {}
 
     summaries = {}
 
-    for city in city_list:
-        print(f"Fetching summary for {city} ...")
-        summaries[city] = fetch_and_mask_city_summary(city)
+    for city_name in city_list:
+        print(f"Fetching summary for {city_name} ...")
+        country = city_info.get(city_name, {}).get("country")
+        summaries[city_name] = fetch_city_summary(city_name, country)
 
     with open(SUMMARIES_FILE, "w", encoding="utf-8") as file:
         json.dump(summaries, file, ensure_ascii=False, indent=2)
@@ -55,7 +94,7 @@ def build_city_summaries():
 
 
 def load_city_summaries():
-    """Load pre-generated city summaries from disk."""
+    """Load saved city summaries."""
     with open(SUMMARIES_FILE, "r", encoding="utf-8") as file:
         return json.load(file)
 
@@ -78,11 +117,9 @@ def get_city_summary(city_name):
             "No summary available for this city.",
         )
     except FileNotFoundError:
-        summary = fetch_and_mask_city_summary(city_name)
+        summary = fetch_city_summary(city_name)
 
-    summary_wrapped = textwrap.fill(summary, width=80)
-    formatted_hint = f"{intro} {summary_wrapped}"
-
+    formatted_hint = f"{intro} {summary}"
     print(f"\n💡 {formatted_hint}\n")
     return formatted_hint
 

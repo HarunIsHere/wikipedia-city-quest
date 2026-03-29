@@ -3,32 +3,44 @@ import os
 import random
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CITY_DATA_FILE = os.path.join(BASE_DIR, "city_info_api.json")
+CITY_DATA_FILES = [
+    os.path.join(BASE_DIR, "City_Info_API.json"),
+    os.path.join(BASE_DIR, "city_info_api.json"),
+]
+CITY_LIST_FILE = os.path.join(BASE_DIR, "city_list.json")
 ALL_QUESTIONS_FILE = os.path.join(BASE_DIR, "all_questions.json")
 NUM_CHOICES = 4
 
 
-def load_city_data():
-    """Load city data from JSON."""
-    with open(CITY_DATA_FILE, "r", encoding="utf-8") as file:
+def load_city_list():
+    """Load the curated list of playable cities."""
+    with open(CITY_LIST_FILE, "r", encoding="utf-8") as file:
         return json.load(file)
 
 
-def generate_questions(city_name, city_data, num_choices=NUM_CHOICES):
-    """Generate multiple-choice questions from city attributes."""
-    city_names = list(city_data.keys())
+def load_city_data():
+    """Load city data from the first available JSON file."""
+    for path in CITY_DATA_FILES:
+        if os.path.exists(path):
+            with open(path, "r", encoding="utf-8") as file:
+                return json.load(file)
 
-    if city_name not in city_names:
+    raise FileNotFoundError("No city info JSON file found.")
+
+
+def generate_questions(city_name, city_data, playable_cities, num_choices=NUM_CHOICES):
+    """Generate multiple-choice questions from curated city attributes."""
+    if city_name not in city_data:
         raise ValueError(f"{city_name} not found in city data.")
 
     info = city_data[city_name]
     questions = []
 
-    def get_wrong_choices(correct):
-        available = [city for city in city_names if city != correct]
-        return random.sample(available, num_choices - 1)
+    def get_wrong_choices(correct_city):
+        pool = [city for city in playable_cities if city != correct_city]
+        return random.sample(pool, num_choices - 1)
 
-    def make_question(question_type, question_text):
+    def add_question(question_type, question_text):
         options = get_wrong_choices(city_name) + [city_name]
         random.shuffle(options)
         questions.append(
@@ -40,85 +52,81 @@ def generate_questions(city_name, city_data, num_choices=NUM_CHOICES):
             }
         )
 
-    if info.get("languages"):
-        langs = ", ".join(info["languages"])
-        make_question(
+    languages = info.get("languages", [])
+    if languages:
+        add_question(
             "languages",
-            f"The locals in this city primarily speak {langs}. Which city is it?",
+            (
+                f"The locals in this city primarily speak "
+                f"{', '.join(languages)}. Which city is it?"
+            ),
         )
 
-    if info.get("population"):
-        make_question(
+    population = info.get("population")
+    if population:
+        add_question(
             "population",
-            (
-                f"This city has a population of {info['population']}. "
-                "Which city is it?"
-            ),
+            f"This city has a population of {population}. Which city is it?",
         )
 
-    if info.get("continent"):
-        make_question(
+    continent = info.get("continent")
+    if continent:
+        add_question(
             "continent",
-            (
-                f"This city is located on the continent of {info['continent']}. "
-                "Which city is it?"
-            ),
+            f"This city is located on the continent of {continent}. Which city is it?",
         )
 
-    if info.get("country"):
-        make_question(
+    country = info.get("country")
+    if country:
+        add_question(
             "country",
-            f"This city is in the country {info['country']}. Which city is it?",
+            f"This city is in the country {country}. Which city is it?",
         )
 
-    if info.get("area_km2"):
-        area_val = info["area_km2"]
-        if isinstance(area_val, list):
-            area_val = area_val[0]
-
-        make_question(
+    area_km2 = info.get("area_km2")
+    if isinstance(area_km2, (int, float)) and area_km2 > 0:
+        add_question(
             "area",
-            f"This city covers an area of {area_val:,.2f} km². Which city is it?",
+            f"This city covers an area of {area_km2:,.2f} km². Which city is it?",
         )
 
-    if info.get("highestPoint_m"):
-        height_val = info["highestPoint_m"]
-        if isinstance(height_val, list):
-            height_val = height_val[0]
+    summary = info.get("summary")
+    if summary:
+        summary_sentences = summary.split(". ")
+        brief_summary = ". ".join(summary_sentences[:2]).strip()
+        if brief_summary:
+            add_question(
+                "summary",
+                f"Which city is described as: {brief_summary}?",
+            )
 
-        make_question(
-            "highest_point",
-            (
-                f"The highest point in this city reaches {height_val} meters. "
-                "Which city is it?"
-            ),
-        )
-
-    if info.get("summary"):
-        summary_text = info["summary"].split(". ")
-        brief_summary = ". ".join(summary_text[:2])
-        make_question(
-            "summary",
-            f"Which city is described as: {brief_summary}?",
-        )
-
-    if info.get("image_url"):
-        make_question(
+    image_url = info.get("image_url")
+    if image_url:
+        add_question(
             "image",
-            f"Identify the city in this image: {info['image_url']}",
+            f"Identify the city in this image: {image_url}",
         )
 
     return questions
 
 
 def generate_all_questions():
-    """Generate questions for all cities."""
+    """Generate questions only for curated playable cities."""
     city_data = load_city_data()
+    playable_cities = load_city_list()
     all_questions = []
 
-    for city_name in city_data:
+    for city_name in playable_cities:
+        if city_name not in city_data:
+            continue
+
         try:
-            all_questions.extend(generate_questions(city_name, city_data))
+            city_questions = generate_questions(
+                city_name,
+                city_data,
+                playable_cities,
+            )
+            all_questions.extend(city_questions)
         except (ValueError, KeyError, TypeError):
             continue
 
@@ -132,7 +140,7 @@ def save_all_questions(all_questions):
 
 
 def get_random_question(current_city=None):
-    """Return a random question, choices, and correct letter."""
+    """Return a random question, labeled choices, and correct letter."""
     try:
         with open(ALL_QUESTIONS_FILE, "r", encoding="utf-8") as file:
             all_questions = json.load(file)
@@ -167,18 +175,19 @@ def get_random_question(current_city=None):
         for index, option in enumerate(raw_options[:4])
     ]
 
-    correct = None
+    correct_letter = None
     for index, option in enumerate(raw_options[:4]):
         if option.lower() == correct_answer.lower():
-            correct = letters[index]
+            correct_letter = letters[index]
             break
 
-    if correct is None:
-        correct = random.choice(letters)
+    if correct_letter is None:
+        correct_letter = random.choice(letters)
 
-    return question_text, options, correct
+    return question_text, options, correct_letter
 
 
 if __name__ == "__main__":
     questions = generate_all_questions()
     save_all_questions(questions)
+    print(f"✅ Generated {len(questions)} questions and saved to all_questions.json")

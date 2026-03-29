@@ -1,156 +1,552 @@
 [
   {
-    "question_type": "population",
-    "question": "This city has a population of 16,123,984. Which city is it?",
-    "correct_answer": "Gujranwala Division",
-    "options": [
-      "Gujranwala Division",
-      "São Paulo",
-      "Zhengzhou",
-      "Wuhan"
-    ]
-  },
-  {
     "question_type": "country",
-    "question": "This city is in the country Pakistan. Which city is it?",
-    "correct_answer": "Gujranwala Division",
+    "question": "This city is in the country Japan. Which city is it?",
+    "correct_answer": "Tokyo",
     "options": [
-      "Baoding",
-      "Changsha",
-      "Gujranwala Division",
-      "Hangzhou"
+      "Tokyo",
+      "Los Angeles",
+      "Christchurch",
+      "Kinshasa"
     ]
   },
   {
-    "question_type": "population",
-    "question": "This city has a population of 14,933,274. Which city is it?",
-    "correct_answer": "Beijing Shi",
+    "question_type": "continent",
+    "question": "This city is located on the continent of Asia. Which city is it?",
+    "correct_answer": "Shanghai",
     "options": [
-      "Beijing Shi",
-      "Lima",
-      "Karachi",
-      "Chongqing Shi"
+      "Johannesburg",
+      "New York",
+      "Shanghai",
+      "Houston"
     ]
   },
   {
-    "question_type": "country",
-    "question": "This city is in the country People's Republic of China. Which city is it?",
-    "correct_answer": "Beijing Shi",
+    "question_type": "languages",
+    "question": "The main language associated with this city is Chinese. Which city is it?",
+    "correct_answer": "Beijing",
     "options": [
-      "Zhengzhou",
-      "Guangzhou",
-      "Beijing Shi",
-      "Suzhou"
-    ]
-  },
-  {
-    "question_type": "population",
-    "question": "This city has a population of 14,177,081. Which city is it?",
-    "correct_answer": "Faisalabad Division",
-    "options": [
-      "Lahore District",
-      "Jakarta",
       "Lagos",
-      "Faisalabad Division"
+      "Beijing",
+      "Washington",
+      "London"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city is the capital territory of India and sits on the Yamuna River.",
+    "correct_answer": "Delhi",
+    "options": [
+      "Bogota",
+      "Sao Paulo",
+      "Delhi",
+      "Perth"
     ]
   },
   {
     "question_type": "country",
-    "question": "This city is in the country Pakistan. Which city is it?",
-    "correct_answer": "Faisalabad Division",
+    "question": "This city is in the country India. Which city is it?",
+    "correct_answer": "Mumbai",
     "options": [
-      "Faisalabad Division",
-      "Suzhou",
+      "Mumbai",
+      "Adelaide",
+      "Bangkok",
+      "Auckland"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of Asia. Which city is it?",
+    "correct_answer": "Bangkok",
+    "options": [
+      "Cape Town",
+      "Bangkok",
+      "Nairobi",
+      "Toronto"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is English. Which city is it?",
+    "correct_answer": "Singapore",
+    "options": [
+      "Miami",
+      "Singapore",
+      "Vienna",
+      "Mexico City"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city is the capital of South Korea and lies on the Han River.",
+    "correct_answer": "Seoul",
+    "options": [
+      "Seoul",
+      "Adelaide",
+      "New York",
+      "Bangkok"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Indonesia. Which city is it?",
+    "correct_answer": "Jakarta",
+    "options": [
+      "Amsterdam",
+      "Addis Ababa",
+      "Jakarta",
+      "Adelaide"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of Europe. Which city is it?",
+    "correct_answer": "London",
+    "options": [
+      "Barcelona",
+      "London",
+      "Rome",
+      "Buenos Aires"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is French. Which city is it?",
+    "correct_answer": "Paris",
+    "options": [
+      "Washington",
+      "Nairobi",
+      "Bangkok",
+      "Paris"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city is the capital of Germany and is known for its modern history and cultural scene.",
+    "correct_answer": "Berlin",
+    "options": [
+      "Berlin",
+      "Lagos",
+      "Perth",
+      "Rio de Janeiro"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Spain. Which city is it?",
+    "correct_answer": "Madrid",
+    "options": [
+      "Madrid",
+      "Sao Paulo",
       "Moscow",
-      "Los Angeles County"
+      "Bogota"
     ]
   },
   {
-    "question_type": "population",
-    "question": "This city has a population of 12,265,161. Which city is it?",
-    "correct_answer": "Multan Division",
+    "question_type": "continent",
+    "question": "This city is located on the continent of Europe. Which city is it?",
+    "correct_answer": "Rome",
     "options": [
-      "Multan Division",
-      "Istanbul",
-      "Dhaka",
-      "Baoding"
+      "Nairobi",
+      "Bogota",
+      "Rome",
+      "Kinshasa"
     ]
   },
   {
-    "question_type": "country",
-    "question": "This city is in the country Pakistan. Which city is it?",
-    "correct_answer": "Multan Division",
+    "question_type": "languages",
+    "question": "The main language associated with this city is Russian. Which city is it?",
+    "correct_answer": "Moscow",
     "options": [
-      "Baoding",
-      "Chongqing",
-      "Multan Division",
-      "Shenzhen"
-    ]
-  },
-  {
-    "question_type": "population",
-    "question": "This city has a population of 12,135,000. Which city is it?",
-    "correct_answer": "Chongqing Shi",
-    "options": [
-      "Lima",
-      "Ho Chi Minh City",
-      "Dera Ghazi Khan District",
-      "Chongqing Shi"
-    ]
-  },
-  {
-    "question_type": "country",
-    "question": "This city is in the country People's Republic of China. Which city is it?",
-    "correct_answer": "Chongqing Shi",
-    "options": [
-      "São Paulo",
-      "Chongqing Shi",
-      "Bengaluru",
-      "Faisalabad Division"
-    ]
-  },
-  {
-    "question_type": "population",
-    "question": "This city has a population of 11,900,000. Which city is it?",
-    "correct_answer": "Greater Rio de Janeiro",
-    "options": [
-      "Greater Rio de Janeiro",
-      "North 24 Parganas district",
       "Moscow",
-      "Harbin"
+      "Madrid",
+      "Berlin",
+      "Beijing"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city is a major Mediterranean city in Catalonia known for Gaudí architecture.",
+    "correct_answer": "Barcelona",
+    "options": [
+      "Barcelona",
+      "Christchurch",
+      "Bangkok",
+      "Auckland"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Netherlands. Which city is it?",
+    "correct_answer": "Amsterdam",
+    "options": [
+      "Bangkok",
+      "Brisbane",
+      "Sao Paulo",
+      "Amsterdam"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of Europe. Which city is it?",
+    "correct_answer": "Vienna",
+    "options": [
+      "Miami",
+      "Barcelona",
+      "Rome",
+      "Vienna"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is Arabic. Which city is it?",
+    "correct_answer": "Cairo",
+    "options": [
+      "Cairo",
+      "Montreal",
+      "Mexico City",
+      "Melbourne"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city is Nigeria's largest city and a major coastal center in West Africa.",
+    "correct_answer": "Lagos",
+    "options": [
+      "Seoul",
+      "Lagos",
+      "Santiago",
+      "Montreal"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country South Africa. Which city is it?",
+    "correct_answer": "Johannesburg",
+    "options": [
+      "Adelaide",
+      "Johannesburg",
+      "Vienna",
+      "Shanghai"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of Africa. Which city is it?",
+    "correct_answer": "Nairobi",
+    "options": [
+      "Paris",
+      "Addis Ababa",
+      "Dakar",
+      "Nairobi"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is Amharic. Which city is it?",
+    "correct_answer": "Addis Ababa",
+    "options": [
+      "Brisbane",
+      "Addis Ababa",
+      "Moscow",
+      "London"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This coastal city is known for Table Mountain and sits near the Cape of Good Hope.",
+    "correct_answer": "Cape Town",
+    "options": [
+      "Cape Town",
+      "Shanghai",
+      "Caracas",
+      "Seoul"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Senegal. Which city is it?",
+    "correct_answer": "Dakar",
+    "options": [
+      "Bangkok",
+      "Cape Town",
+      "Dakar",
+      "New York"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of Africa. Which city is it?",
+    "correct_answer": "Kinshasa",
+    "options": [
+      "Perth",
+      "Kinshasa",
+      "Berlin",
+      "Madrid"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is English. Which city is it?",
+    "correct_answer": "New York",
+    "options": [
+      "New York",
+      "Delhi",
+      "Auckland",
+      "Adelaide"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city in California is closely linked with Hollywood and the film industry.",
+    "correct_answer": "Los Angeles",
+    "options": [
+      "Singapore",
+      "Amsterdam",
+      "Los Angeles",
+      "Santiago"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Canada. Which city is it?",
+    "correct_answer": "Toronto",
+    "options": [
+      "Lagos",
+      "Addis Ababa",
+      "Sydney",
+      "Toronto"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of North America. Which city is it?",
+    "correct_answer": "Mexico City",
+    "options": [
+      "Mexico City",
+      "Chicago",
+      "Beijing",
+      "Washington"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is English. Which city is it?",
+    "correct_answer": "Chicago",
+    "options": [
+      "Amsterdam",
+      "Madrid",
+      "Addis Ababa",
+      "Chicago"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This Texas city is linked with the space program and major energy industries.",
+    "correct_answer": "Houston",
+    "options": [
+      "Auckland",
+      "Houston",
+      "Rome",
+      "Brisbane"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country Canada. Which city is it?",
+    "correct_answer": "Montreal",
+    "options": [
+      "Montreal",
+      "Nairobi",
+      "Paris",
+      "Miami"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of North America. Which city is it?",
+    "correct_answer": "Washington",
+    "options": [
+      "Melbourne",
+      "Berlin",
+      "Tokyo",
+      "Washington"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is English. Which city is it?",
+    "correct_answer": "Miami",
+    "options": [
+      "Buenos Aires",
+      "Miami",
+      "Montreal",
+      "Lagos"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city is the largest in Brazil and a major financial center in South America.",
+    "correct_answer": "Sao Paulo",
+    "options": [
+      "Brisbane",
+      "Sao Paulo",
+      "Rio de Janeiro",
+      "London"
     ]
   },
   {
     "question_type": "country",
     "question": "This city is in the country Brazil. Which city is it?",
-    "correct_answer": "Greater Rio de Janeiro",
+    "correct_answer": "Rio de Janeiro",
     "options": [
-      "Greater Rio de Janeiro",
-      "Karachi",
-      "Dera Ghazi Khan District",
-      "Istanbul"
+      "Wellington",
+      "Rio de Janeiro",
+      "Nairobi",
+      "Beijing"
     ]
   },
   {
-    "question_type": "population",
-    "question": "This city has a population of 11,464,031. Which city is it?",
-    "correct_answer": "Bahawalpur Division",
+    "question_type": "continent",
+    "question": "This city is located on the continent of South America. Which city is it?",
+    "correct_answer": "Buenos Aires",
     "options": [
-      "Dera Ghazi Khan District",
-      "Bahawalpur Division",
-      "Suzhou",
-      "Tianjin"
+      "Christchurch",
+      "Chicago",
+      "Buenos Aires",
+      "Addis Ababa"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is Turkish. Which city is it?",
+    "correct_answer": "Ankara",
+    "options": [
+      "Buenos Aires",
+      "Ankara",
+      "Santiago",
+      "Caracas"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This high-altitude city is the capital of Colombia.",
+    "correct_answer": "Bogota",
+    "options": [
+      "Wellington",
+      "New York",
+      "Bogota",
+      "Dakar"
     ]
   },
   {
     "question_type": "country",
-    "question": "This city is in the country Pakistan. Which city is it?",
-    "correct_answer": "Bahawalpur Division",
+    "question": "This city is in the country Chile. Which city is it?",
+    "correct_answer": "Santiago",
     "options": [
-      "Multan Division",
-      "Bengaluru",
-      "Shanghai",
-      "Bahawalpur Division"
+      "Paris",
+      "Santiago",
+      "Brisbane",
+      "Nairobi"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of South America. Which city is it?",
+    "correct_answer": "Caracas",
+    "options": [
+      "Auckland",
+      "Perth",
+      "Dakar",
+      "Caracas"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is English. Which city is it?",
+    "correct_answer": "Sydney",
+    "options": [
+      "New York",
+      "Rio de Janeiro",
+      "Sydney",
+      "Brisbane"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city is known for laneways, coffee culture, and major sporting events.",
+    "correct_answer": "Melbourne",
+    "options": [
+      "Mumbai",
+      "Brisbane",
+      "Melbourne",
+      "Amsterdam"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country New Zealand. Which city is it?",
+    "correct_answer": "Auckland",
+    "options": [
+      "Christchurch",
+      "Ankara",
+      "Auckland",
+      "Sao Paulo"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of Oceania. Which city is it?",
+    "correct_answer": "Brisbane",
+    "options": [
+      "Mexico City",
+      "Brisbane",
+      "Lagos",
+      "Johannesburg"
+    ]
+  },
+  {
+    "question_type": "languages",
+    "question": "The main language associated with this city is English. Which city is it?",
+    "correct_answer": "Perth",
+    "options": [
+      "Bangkok",
+      "Perth",
+      "Sao Paulo",
+      "Santiago"
+    ]
+  },
+  {
+    "question_type": "summary",
+    "question": "Which city matches this clue: This city is the capital of South Australia and is known for festivals and wine regions nearby.",
+    "correct_answer": "Adelaide",
+    "options": [
+      "New York",
+      "Johannesburg",
+      "Adelaide",
+      "Melbourne"
+    ]
+  },
+  {
+    "question_type": "country",
+    "question": "This city is in the country New Zealand. Which city is it?",
+    "correct_answer": "Wellington",
+    "options": [
+      "Christchurch",
+      "Tokyo",
+      "Wellington",
+      "Brisbane"
+    ]
+  },
+  {
+    "question_type": "continent",
+    "question": "This city is located on the continent of Oceania. Which city is it?",
+    "correct_answer": "Christchurch",
+    "options": [
+      "Christchurch",
+      "Ankara",
+      "Caracas",
+      "Madrid"
     ]
   }
 ]
