@@ -1,9 +1,8 @@
 import json
-from tabulate import tabulate  # pip install tabulate
 
-# ----------------------------
-# Save & Display Results (Ranked)
-# ----------------------------
+from tabulate import tabulate
+
+
 def save_and_display_results(name, visited, correct_answers, total_time):
     """Save player's results to results.json and display ranked leaderboard."""
     result = {
@@ -13,34 +12,41 @@ def save_and_display_results(name, visited, correct_answers, total_time):
         "Cities visited": visited,
     }
 
-    # Load existing data
     try:
-        with open("results.json", "r") as f:
-            data = json.load(f)
+        with open("results.json", "r", encoding="utf-8") as file:
+            data = json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
         data = {}
 
-    # Update or add player record
     data[name] = result
 
-    # Save updated data
-    with open("results.json", "w") as f:
-        json.dump(data, f, indent=4)
+    with open("results.json", "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=4)
 
-    # Sort by: most correct → least time
     sorted_data = sorted(
         data.items(),
-        key=lambda x: (
-            -x[1]["Correct answers"],   # descending (more correct = better)
-            x[1]["Total time (s)"],     # ascending (less time = better)
-        )
+        key=lambda item: (
+            -item[1]["Correct answers"],
+            item[1]["Total time (s)"],
+        ),
     )
 
-    # Prepare table
     table = [
-        [i + 1, player, stats["Correct answers"], stats["Total time (s)"], stats["Steps taken"]]
-        for i, (player, stats) in enumerate(sorted_data)
+        [
+            index + 1,
+            player,
+            stats["Correct answers"],
+            stats["Total time (s)"],
+            stats["Steps taken"],
+        ]
+        for index, (player, stats) in enumerate(sorted_data)
     ]
 
     print("\n🏅 Leaderboard (Ranked):")
-    print(tabulate(table, headers=["Rank", "Player", "Correct", "Time (s)", "Steps"], tablefmt="fancy_grid"))
+    print(
+        tabulate(
+            table,
+            headers=["Rank", "Player", "Correct", "Time (s)", "Steps"],
+            tablefmt="fancy_grid",
+        )
+    )

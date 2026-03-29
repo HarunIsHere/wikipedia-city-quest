@@ -1,19 +1,19 @@
-import requests
 import json
-import time
 import random
-import wikipedia
-import certifi
+import time
 from collections import defaultdict
 
-# --- Configuration ---
+import certifi
+import requests
+import wikipedia
+
+
 TOP_N = 50
 LIMIT_PER_REQUEST = 10
 OUTPUT_FILE = "city_info_api.json"
 DELAY = 1
 MAX_RETRIES = 5
 
-# --- API Info ---
 GEODB_HOST = "wft-geo-db.p.rapidapi.com"
 GEODB_KEY = "60b10cec3dmsh63212fbfa712c74p1cd6e7jsnb17850f361ad"
 
@@ -21,18 +21,16 @@ HEADERS_GEODB = {
     "X-RapidAPI-Key": GEODB_KEY,
     "X-RapidAPI-Host": GEODB_HOST,
     "Accept": "application/json",
-    "User-Agent": "CityDataCollector/1.0"
+    "User-Agent": "CityDataCollector/1.0",
 }
 
-# --- Wikidata ---
 HEADERS_WIKIDATA = {
-    "User-Agent": "CityInfoFetcher/1.0 (maryksprague@gmail.com)"
+    "User-Agent": "CityInfoFetcher/1.0 (harunayarturk@gmail.com)",
 }
 
 WD_ENDPOINT = "https://query.wikidata.org/sparql"
 
 
-# --- STEP 1: FETCH TOP CITIES ---
 def fetch_top_cities(top_n=TOP_N):
     """Fetch top cities by population."""
     cities = {}
@@ -40,21 +38,33 @@ def fetch_top_cities(top_n=TOP_N):
 
     while len(cities) < top_n:
         url = f"https://{GEODB_HOST}/v1/geo/cities"
-        params = {"sort": "-population", "limit": LIMIT_PER_REQUEST, "offset": offset}
+        params = {
+            "sort": "-population",
+            "limit": LIMIT_PER_REQUEST,
+            "offset": offset,
+        }
 
         try:
-            resp = requests.get(url, headers=HEADERS_GEODB, params=params)
-            if resp.status_code == 429:
+            response = requests.get(
+                url,
+                headers=HEADERS_GEODB,
+                params=params,
+                timeout=30,
+            )
+
+            if response.status_code == 429:
                 print("⚠️ Processing.... please wait.")
                 time.sleep(DELAY * 5)
                 continue
-            if resp.status_code == 403:
+
+            if response.status_code == 403:
                 print("❌ Forbidden: check API key or subscription.")
                 break
-            resp.raise_for_status()
-            data = resp.json()
-        except requests.RequestException as e:
-            print(f"❌ HTTP error fetching cities: {e}")
+
+            response.raise_for_status()
+            data = response.json()
+        except requests.RequestException as error:
+            print(f"❌ HTTP error fetching cities: {error}")
             break
 
         items = data.get("data", [])
@@ -89,6 +99,7 @@ def fetch_top_cities(top_n=TOP_N):
                 break
 
         offset += LIMIT_PER_REQUEST
+
         if len(cities) < top_n:
             time.sleep(DELAY)
 
@@ -96,9 +107,8 @@ def fetch_top_cities(top_n=TOP_N):
     return cities
 
 
-# --- STEP 2: QUERY WIKIDATA ---
 def query_wikidata(qid):
-    """Query Wikidata for city attributes using requests + certifi."""
+    """Query Wikidata for city attributes using requests and certifi."""
     query = f"""
     SELECT ?cityLabel ?continentLabel ?officialLanguageLabel ?significantEventLabel
            ?area ?highestPoint ?aerialView ?osmId ?filmLabel ?officialSymbolLabel
@@ -130,15 +140,17 @@ def query_wikidata(qid):
     """
 
     try:
-        resp = requests.get(
+        response = requests.get(
             WD_ENDPOINT,
             params={"query": query, "format": "json"},
-            headers={"User-Agent": "CityInfoFetcher/1.0 (maryksprague@gmail.com)"},
-            verify=certifi.where()
+            headers=HEADERS_WIKIDATA,
+            verify=certifi.where(),
+            timeout=30,
         )
-        resp.raise_for_status()
-        results = resp.json()
+        response.raise_for_status()
+        results = response.json()
         bindings = results.get("results", {}).get("bindings", [])
+
         if not bindings:
             return {}
 
@@ -146,35 +158,33 @@ def query_wikidata(qid):
         for key, value in bindings[0].items():
             data[key].append(value.get("value"))
 
-        # Convert area (m²) to km²
         if "area" in data:
             try:
                 data["area_km2"] = [float(data["area"][0]) / 1_000_000]
-            except Exception:
+            except (TypeError, ValueError, IndexError):
                 data["area_km2"] = None
 
-        # Convert highest point to float
         if "highestPoint" in data:
             try:
                 data["highestPoint_m"] = [float(data["highestPoint"][0])]
-            except Exception:
+            except (TypeError, ValueError, IndexError):
                 data["highestPoint_m"] = None
 
-        # Ensure films and symbols exist
         for key in ["filmLabel", "officialSymbolLabel"]:
             if key not in data:
                 data[key] = []
 
         return dict(data)
 
-    except Exception as e:
+    except requests.RequestException:
         return {}
 
 
-# --- STEP 3: ENRICH CITY DATA ---
 def enrich_city(cities_dict):
+    """Enrich city data with Wikidata information."""
     enriched = {}
-    print(f"⚠️ Enriching city data - please wait...")
+    print("⚠️ Enriching city data - please wait...")
+
     for city_name, city_data in cities_dict.items():
         qid = city_data.get("wikiDataId")
         if not qid:
@@ -183,23 +193,35 @@ def enrich_city(cities_dict):
 
         wikidata_info = query_wikidata(qid)
 
-        # Flatten single-value lists
-        for key in ["continentLabel", "highestPoint_m", "area_km2", "osmId",
-                    "coordinateLocation", "timeZoneLabel"]:
+        for key in [
+            "continentLabel",
+            "highestPoint_m",
+            "area_km2",
+            "osmId",
+            "coordinateLocation",
+            "timeZoneLabel",
+        ]:
             if key in wikidata_info and wikidata_info[key]:
                 wikidata_info[key] = wikidata_info[key][0]
 
-        # Parse coordinates into {lat, lon}
-        if "coordinateLocation" in wikidata_info and wikidata_info["coordinateLocation"]:
+        if (
+            "coordinateLocation" in wikidata_info
+            and wikidata_info["coordinateLocation"]
+        ):
             coord = wikidata_info["coordinateLocation"]
             if coord.startswith("Point(") and coord.endswith(")"):
                 try:
-                    lon, lat = map(float, coord.replace("Point(", "").replace(")", "").split())
-                    wikidata_info["coordinateLocation"] = {"lat": lat, "lon": lon}
-                except Exception:
+                    lon, lat = map(
+                        float,
+                        coord.replace("Point(", "").replace(")", "").split(),
+                    )
+                    wikidata_info["coordinateLocation"] = {
+                        "lat": lat,
+                        "lon": lon,
+                    }
+                except (TypeError, ValueError):
                     wikidata_info["coordinateLocation"] = None
 
-        # Ensure multi-value lists exist
         for list_key in ["filmLabel", "officialSymbolLabel"]:
             if list_key not in wikidata_info:
                 wikidata_info[list_key] = []
@@ -210,8 +232,8 @@ def enrich_city(cities_dict):
     return enriched
 
 
-# --- STEP 4: ADD WIKIPEDIA SUMMARY AND IMAGE ---
 def add_wikipedia_summary_and_image(cities):
+    """Add Wikipedia summary and image URL to each city."""
     for city_name, info in cities.items():
         country = info.get("country")
         query = f"{city_name}, {country}" if country else city_name
@@ -220,31 +242,16 @@ def add_wikipedia_summary_and_image(cities):
             page = wikipedia.page(query, auto_suggest=False)
             summary = wikipedia.summary(query, sentences=3, auto_suggest=False)
 
-            def get_city_image(images):
-                banned_keywords = [
-                    "flag", "coat", "arms", "emblem", "seal", "map", "locator",
-                    "symbol", "logo", "banner", "blason", "insignia", "outline",
-                    "satellite", "shield", "diagram"
-                ]
-                preferred_ext = (".jpg", ".jpeg", ".png", ".webp")
-                candidates = [
-                    img for img in images
-                    if img.lower().endswith(preferred_ext)
-                    and not any(bad in img.lower() for bad in banned_keywords)
-                ]
-                candidates.sort(key=lambda i: (
-                    ("skyline" in i.lower() or "city" in i.lower()),
-                    "wikimedia" in i.lower(),
-                    len(i)
-                ), reverse=True)
-                return candidates[0] if candidates else None
-
             image_url = get_city_image(page.images)
             info["summary"] = summary
             info["image_url"] = image_url
 
-        except wikipedia.exceptions.DisambiguationError as e:
-            options = [opt for opt in e.options if "city" in opt.lower() or "capital" in opt.lower()]
+        except wikipedia.exceptions.DisambiguationError as error:
+            options = [
+                option
+                for option in error.options
+                if "city" in option.lower() or "capital" in option.lower()
+            ]
             if options:
                 try:
                     page = wikipedia.page(options[0], auto_suggest=False)
@@ -273,20 +280,61 @@ def add_wikipedia_summary_and_image(cities):
     return cities
 
 
-# --- STEP 5: SAVE TO JSON ---
+def get_city_image(images):
+    """Return the most suitable city image URL from Wikipedia images."""
+    banned_keywords = [
+        "flag",
+        "coat",
+        "arms",
+        "emblem",
+        "seal",
+        "map",
+        "locator",
+        "symbol",
+        "logo",
+        "banner",
+        "blason",
+        "insignia",
+        "outline",
+        "satellite",
+        "shield",
+        "diagram",
+    ]
+    preferred_ext = (".jpg", ".jpeg", ".png", ".webp")
+
+    candidates = [
+        image
+        for image in images
+        if image.lower().endswith(preferred_ext)
+        and not any(bad in image.lower() for bad in banned_keywords)
+    ]
+
+    candidates.sort(
+        key=lambda image: (
+            "skyline" in image.lower() or "city" in image.lower(),
+            "wikimedia" in image.lower(),
+            len(image),
+        ),
+        reverse=True,
+    )
+
+    return candidates[0] if candidates else None
+
+
 def save_to_json(data, filename=OUTPUT_FILE):
+    """Save city data to JSON."""
     for info in data.values():
         if info.get("population") is not None:
             info["population"] = f"{info['population']:,}"
 
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    with open(filename, "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=2, ensure_ascii=False)
 
 
-# --- MAIN ---
 if __name__ == "__main__":
     top_cities = fetch_top_cities(TOP_N)
     enriched_data = enrich_city(top_cities)
     enriched_data = add_wikipedia_summary_and_image(enriched_data)
     save_to_json(enriched_data)
     print(f"✅ Data saved to {OUTPUT_FILE}")
+
